@@ -1,0 +1,126 @@
+/* create region */
+
+#treeview {
+  border: dashed 10px #51adf6;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: auto !important;
+}
+
+#newLeaf>.modal-dialog>.modal-content>.modal-body>.questions {
+  width: 51%;
+  margin: 0 auto 0 auto;
+}
+
+.modal-body>textarea:focus {
+  border: 1px solid #a4d9f9;
+  box-shadow: 0 0 2px #a4d9f9;
+}
+
+.modal-body>.form-group>textarea {
+  background: #fff;
+  border-radius: 8px;
+  outline: none !important;
+  border: 1px solid #e6ecf0;
+  line-height: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  resize: none;
+  width: 100%;
+}
+
+.add {
+  float: left;
+  margin: 0 auto 0 auto;
+  border: solid 10px #51adf6;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  text-align: center;
+  transition: all .1s linear;
+}
+
+#newLeaf>.modal-dialog>.modal-content {
+  border-radius: 20px;
+}
+
+.add:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.add:hover h3 {
+  transform: scale(1.2);
+}
+
+.add>h3 {
+  transition: all .1s linear;
+}
+
+#addQuestionButton {
+  transition: all 0.3s ease;
+}
+
+#addbtn {
+  margin-bottom: 4%
+}
+
+.elem {
+  float: left;
+  border: 1px solid rgba(0, 0, 0, .13);
+  border-radius: 10px;
+  background: #f3f3f3;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .13);
+  transition: all .1s linear;
+  width: 200px;
+  max-height: 150px;
+  min-height: 150px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 5% 4.5% 5% 4.5%;
+}
+
+.elem>.elem-title {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, .13);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .13);
+  border-radius: 8px;
+  padding: 5px 3px 5px 3px;
+  font-size: 1.1rem;
+  max-height: 60px;
+  transition: all .2s ease;
+}
+
+.elem>.links {
+  text-align: center;
+  position: relative;
+  transition: all .2s ease;
+}
+
+.elem>.links>.qelem {
+  margin: 1% 2% 1% 2%;
+}
+
+.elem:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.elem:hover .elem-title {
+  transform: scale(1.2);
+  border: 0;
+  box-shadow: 0px 0px 0px;
+}
+
+.elem:hover h3 {
+  transform: scale(1.2);
+  border: 0;
+}
+
+.add>h3.lead {
+  font-size: 2.4em;
+  top: 40%;
+  position: relative;
+}
