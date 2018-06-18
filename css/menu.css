@@ -1,0 +1,143 @@
+nav {
+  margin-top: 2%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.plus {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: -1;
+}
+
+.display:before, .display:after {
+  content: "";
+  transition: all .5s ease;
+}
+
+.display:before, .display:after {
+  position: absolute;
+  height: 3px;
+  left: 0;
+  right: 0;
+  background-color: #4e347f;
+}
+
+.display:after {
+  transform: rotate(90deg);
+  animation: reduce .7s;
+  animation-fill-mode: forwards;
+}
+
+.menu.active .display:after {
+  animation-fill-mode: both;
+  animation: extends .7s;
+  animation-fill-mode: forwards;
+}
+
+.menu.active .items>* {
+  animation: show .7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes reduce {
+  0% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 90);
+  }
+  50% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 1);
+  }
+  100% {
+    top: 0px;
+    transform: rotate(90deg) scale(1, 1);
+  }
+}
+
+@keyframes extends {
+  0% {
+    top: 0;
+    transform: rotate(90deg) scale(1, 1);
+  }
+  50% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 1);
+  }
+  60% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 90) scale3d(1.25, .75, 1);
+  }
+  70% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 90) scale3d(.75, 1.35, 1);
+  }
+  80% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 90) scale3d(1.15, .85, 1);
+  }
+  85% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 90) scale3d(.95, 1.05, 1);
+  }
+  95% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 90) scale3d(1.05, .95, 1);
+  }
+  100% {
+    top: -50px;
+    transform: rotate(90deg) scale(1.5, 90);
+  }
+}
+
+.item {
+  margin-bottom: 40px;
+  opacity: 0;
+}
+
+.item>a {
+  text-decoration: none;
+  color: white !important;
+  transition: all .1s linear;
+}
+
+.item>a:hover {
+  color: rgba(0, 0, 0, .8) !important;
+}
+
+.items>* {
+  padding-left: 25px;
+  padding-right: 25px;
+  animation: hide .7s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+}

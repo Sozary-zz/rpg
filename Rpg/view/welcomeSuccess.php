@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1 class="display-3">Jeu de rôle</h1>
   <p class="lead">Ce service mis en place par l'APUI d'Avignon permet aux enseignant d'intéragir avec ses étudiants d'une tout nouvelle manière.</p>
   <hr class="my-4">
@@ -7,4 +7,28 @@
     <a class="btn btn-primary btn-lg" href="?action=create" role="button">Création de niveau</a>
     <a class="btn btn-primary btn-lg" href="?action=play" role="button">Jouer à un jeu de role</a>
   </p>
+</div> -->
+<div class="content">
+  <span class="display-4 align-content">Jeu de role</span>
+  <ul class="pres">
+    <li class="appearance">Créez un scénario...</li>
+    <li class="appearance">Ou importez un scénario...</li>
+    <li class="appearance">Puis partagez le!</li>
+  </ul>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    let appearance = () => {
+      $('.pres li').each((i, el) => {
+        setTimeout(() => {
+          $(el).removeClass('appearance')
+          $(el).addClass('appear-on')
+        }, 200 + i * 1000)
+      })
+    }
+    appearance()
+
+
+  })
+</script>
