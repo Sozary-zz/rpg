@@ -8,21 +8,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.css">
   <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/play.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
 
   <link href="modules/cytoscape/cytoscape.js-navigator.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="css/menu.css">
   <title>Jeu de rôle</title>
 </head>
 
-<body>
+<body style="opacity:0;overflow:hidden">
 
-  <div id="page">
-    <?php include($template_view); ?>
-  </div>
+  <?php include($template_view); ?>
+
 
   <nav>
     <div class="menu">
@@ -44,14 +45,23 @@
 
     </div>
   </nav>
-
   <script type="text/javascript">
     $('document').ready(function() {
       $('nav').click(() => {
         $('.menu').toggleClass('active')
       })
     })
+    window.onload = () => {
+      $('body').animate({
+        'opacity': '1'
+      }, 300)
+      if(typeof curstomOnLoad !== "undefined")
+        curstomOnLoad()
+
+    }
   </script>
+
+
 </body>
 
 </html>

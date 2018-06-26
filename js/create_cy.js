@@ -8,6 +8,7 @@ var cy = cytoscape({
         title: 'racine',
         daddy: undefined,
         pic: 'http://209.97.134.204/rpg/images/sprout.png',
+        bkg: 'http://www.oiseaux.net/photos/robert.balestra/images/pic.epeiche.roba.3p.jpg',
         shape: 'ellipse',
         content: ''
       }
@@ -50,6 +51,7 @@ var cy = cytoscape({
       selector: 'edge',
       style: {
         'width': 10,
+        'label': 'data(label)',
         'line-color': '#bbb',
         'curve-style': 'bezier',
         'opacity': 1,
@@ -119,66 +121,3 @@ var defaults = {
 };
 
 var nav = cy.navigator(defaults); // get navigator instance, nav
-function distanceTo(pos1, pos2) {
-  return Math.sqrt(((pos1.x - pos2.x) ** 2) + ((pos1.y - pos2.y) ** 2));
-}
-
-function triggerElem(e) {
-  let nodes = [];
-  cy.elements("node").forEach((el) => {
-    if (el.id() != e.id() && distanceTo(el.position(), e.position()) < 200)
-      nodes.push(el)
-
-  })
-  return nodes;
-}
-cy.on('click', 'node', function(evt) {
-  edit(this);
-});
-var hoveredNodes = []
-
-function nodeInArray(node, arr) {
-  for (let el of arr)
-    if (node.id() == el.id())
-      return true
-  return false
-}
-cy.on('drag', 'node', function(e) {
-  let trig = triggerElem(this)
-  trig.forEach((el) => {
-    if (!nodeInArray(el, hoveredNodes)) {
-      hoveredNodes.push(el)
-      el.addClass('hovered')
-    }
-  })
-  for (let i = 0; i < hoveredNodes.length; i++)
-    if (!nodeInArray(hoveredNodes[i], trig)) {
-      hoveredNodes[i].removeClass('hovered')
-      hoveredNodes.splice(i, 1)
-    }
-});
-cy.on('free', 'node', function(e) {
-
-  if (hoveredNodes.length != 0) {
-    let selected = hoveredNodes[0]
-    selected.removeClass('hovered')
-    hoveredNodes = []
-
-    cy.add([{
-      group: "edges",
-      data: {
-        id: this.data('daddy') + 'E' + selected.id(),
-        source: this.data('daddy'),
-        target: selected.id()
-      }
-    }])
-    this.remove()
-    layout = cy.layout({
-      name: 'breadthfirst', //cose?
-      directed: true,
-      padding: 10,
-      animate: false
-    })
-
-  }
-})

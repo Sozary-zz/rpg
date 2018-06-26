@@ -3,15 +3,35 @@
 #page {
   width: 90%;
   height: 85vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   border: 2px solid rgba(0, 0, 0, .24);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 24);
-  text-align: center;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.more {
+  text-align: center;
+  margin: 10px;
+}
+
+#content {
+  width: 100%;
+  text-align: center;
+}
+
+.left-menu {
+  list-style: none;
+  float: left;
+  position: absolute;
+  transform: translateY(-100%);
+  top: 50%;
+}
+
+.left-menu>li {
+  padding-bottom: 10px;
 }
 
 .appearance {
@@ -68,18 +88,36 @@
 }
 
 #treeview {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border: dashed 10px #51adf6;
   border-radius: 20px;
   position: relative;
   width: 1000px;
-  height: 1000px;
+  height: 80vh;
   display: block;
   background-color: rgba(0, 0, 0, .1);
+  text-align: inherit;
 }
 
 #newLeaf>.modal-dialog>.modal-content>.modal-body>.questions {
   width: 51%;
   margin: 0 auto 0 auto;
+}
+
+#area_content:focus {
+  border-color: #A4D9F9;
+  box-shadow: 0 0 0 1px #A4D9F9;
+}
+
+#area_content {
+  background: #fff;
+  border: 1px solid #e6ecf0;
+  border-radius: 8px;
+  line-height: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  resize: none;
 }
 
 #navigator {
@@ -108,8 +146,18 @@
   width: 100%;
 }
 
-#newLeaf>.modal-dialog>.modal-content {
+#newLeaf>.modal-dialog>.modal-content, #upPic>.modal-dialog>.modal-content {
   border-radius: 20px;
+}
+
+.preview-pic {
+  position: relative;
+  left: 50%;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, .18);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .24);
+  margin: 20px 0 20px -200px;
+  opacity: 0;
 }
 
 #addbtn {
@@ -188,6 +236,39 @@
 .elem:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.custom-close {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  position: relative;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.arr-1, .arr-2 {
+  background-color: #444;
+  width: 28px;
+  height: 2px;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.arr-1 {
+  transform-origin: 0% 50%;
+  transform: rotate(45deg);
+}
+
+.arr-2 {
+  transform: rotate(-45deg);
+  transform-origin: 24px 10px;
+}
+
+.custom-close:hover {
+  transform: rotate(45deg);
 }
 
 .elem:hover .elem-title {

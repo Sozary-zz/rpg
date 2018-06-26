@@ -1,0 +1,162 @@
+#panel {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111114;
+}
+
+.scenario-form {
+  width: 25%;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .4s ease-out;
+}
+
+.scenario-form.goodbye {
+  animation-name: goodbye-form;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.ok-btn.goodbye {
+  animation-name: goodbye-btn;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes goodbye-form {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%)scale(0.001);
+  }
+}
+
+@keyframes goodbye-btn {
+  0% {
+    opacity: 1;
+    transform: translate(0%, -130%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0%, -130%)scale(0.001);
+  }
+}
+
+.ok-btn {
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(0, -50%);
+  margin-left: -36px;
+  opacity: 0;
+  transition: all .2s ease-in;
+  visibility: hidden;
+}
+
+.ok-btn.active {
+  visibility: visible;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(0, -130%);
+  margin-left: -36px;
+  opacity: 1;
+}
+
+.scenario-form>.form-group {
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+}
+
+.scenario-form>.form-group>.form-control {
+  width: 10%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+  transition: all .2s ease-in;
+  text-align: center;
+}
+
+.scenario-form>.form-group>.form-control:hover, .scenario-form>.form-group>.form-control:focus {
+  width: 90%;
+}
+
+#grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500vw;
+  height: 500vh;
+  visibility: hidden;
+  transform: scale(.5);
+  transform-origin: 0% -20%;
+}
+
+#grid>ul {
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  max-width: 300vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.grid-item {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  float: left;
+}
+
+.frame-item {
+  text-align: center;
+  width: 50vw;
+  height: auto;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, .4);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  opacity: 0;
+}
+
+.frame-item>.question-item {
+  font-size: 400%;
+  position: relative;
+  font-weight: 300px;
+  color: whitesmoke;
+}
+
+.frame-item>ol {
+  position: relative;
+  width: 25vw;
+  left: 50%;
+  margin-left: calc(-25vw /2);
+}
+
+.frame-item>ol>.answer-item {
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, .14);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .14);
+  margin: auto 0 auto 0;
+  font-size: 2.4em;
+  color: whitesmoke;
+  width: 100%;
+  cursor: pointer;
+}

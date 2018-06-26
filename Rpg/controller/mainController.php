@@ -17,16 +17,21 @@ class mainController
     {
         return context::SUCCESS;
     }
+
+    public static function canIPlay($request, $context)
+    {
+        echo file_get_contents($request['id'].'.json');
+        return context::NONE;
+    }
     public static function create($request, $context)
     {
         return context::SUCCESS;
     }
-    public static function ligne($request, $context)
+    public static function saveJson($request, $context)
     {
-        return context::SUCCESS;
-    }
-    public static function lignedeux($request, $context)
-    {
-        return context::SUCCESS;
+        if (isset($request['data'])) {
+            file_put_contents(sha1($request['data']).'.json', $request['data']);
+        }
+        return context::NONE;
     }
 }
