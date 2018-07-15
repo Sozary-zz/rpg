@@ -16,12 +16,60 @@ $("#questionAsked").keyup(function() {
   }
 })
 
+let loadJson = (json) => {
+  new_cy = json
+  cy = cytoscape({
+    container: $('#treeview'),
+    elements: new_cy.elements,
+    style: new_cy.style,
+  })
+  $('#treeview').animate({
+    'opacity': '1'
+  }, 500);
+  cy.layout({
+    name: 'breadthfirst',
+    directed: true,
+    padding: 10,
+    animate: false
+  })
+  center()
+  applyEvents()
+}
 
+let readZip = (r) => {
+  console.log(r);
+  zip.createReader(new zip.BlobReader(r), function(reader) {
+    console.log('ww');
+    // get all entries from the zip
+    reader.getEntries(function(entries) {
+      if (entries.length) {
+
+        // get first entry content as text
+        entries[0].getData(new zip.TextWriter(), function(text) {
+          // text contains the entry data as a String
+          console.log(text);
+
+          // close the zip reader
+          reader.close(function() {
+            // onclose callback
+          });
+
+        }, function(current, total) {
+          // onprogress callback
+        });
+      }
+    });
+  }, function(error) {
+    // onerror callback
+  });
+}
 
 control.addEventListener("change", function(event) {
   file = control.files[0]
+  readZip(file)
   reader = new FileReader();
   var blob = file.slice(0, file.size);
+
   $('#treeview').animate({
     'opacity': '0'
   }, 300);
@@ -29,23 +77,8 @@ control.addEventListener("change", function(event) {
 
   reader.onloadend = function(evt) {
     if (evt.target.readyState == FileReader.DONE) {
-      new_cy = JSON.parse(evt.target.result)
-      cy = cytoscape({
-        container: $('#treeview'),
-        elements: new_cy.elements,
-        style: new_cy.style,
-      })
-      $('#treeview').animate({
-        'opacity': '1'
-      }, 500);
-      cy.layout({
-        name: 'breadthfirst',
-        directed: true,
-        padding: 10,
-        animate: false
-      })
-      center()
-      applyEvents()
+
+      loadJson(JSON.parse(evt.target.result))
     }
   };
   reader.readAsBinaryString(blob);
@@ -55,6 +88,15 @@ let applyEvents = () => {
 
   cy.on('click', 'node', function(evt) {
     edit(this);
+  });
+
+  cy.on('mouseover', 'node', function(evt) {
+
+    this.addClass('mouseon')
+
+  });
+  cy.on('mouseout', 'node', function(evt) {
+    this.removeClass('mouseon')
   });
 
   cy.on('drag', 'node', function(e) {
@@ -84,7 +126,8 @@ let applyEvents = () => {
         data: {
           id: this.data('daddy') + 'E' + selected.id(),
           source: this.data('daddy'),
-          target: selected.id()
+          target: selected.id(),
+          label: cy.elements('edge[target="' + this.id() + '"][source="' + this.data('daddy') + '"]').data('label'),
         }
       }])
       this.remove()

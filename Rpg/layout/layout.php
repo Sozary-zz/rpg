@@ -14,9 +14,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
   <link href="modules/cytoscape/cytoscape.js-navigator.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/menu_.css">
+  <script src="./js/topBottom.js" charset="utf-8"></script>
   <title>Jeu de rôle</title>
 </head>
 
@@ -24,10 +25,24 @@
 
   <?php include($template_view); ?>
 
-
   <nav>
-    <div class="menu">
+    <ol>
+      <li><a href="?action=welcome">Accueil</a></li>
+      <?php  if ($_SESSION['connected']):?>
+        <li class="menu-item"><a href="#0"><?php echo $_SESSION['usr'] ?></a></li>
+      <?php endif;?>
+      <li><a href="?action=create">Créer</a></li>
+      <li><a href="?action=about">Contact</a></li>
+    </ol>
+    <div class="toggle">
+      <span class="first"></span>
+      <span class="scnd"></span>
+    </div>
+  </nav>
 
+
+  <!-- <nav>
+    <div class="menu">
       <div class="items">
         <div class="item">
           <a href="?action=welcome">Accueil</a>
@@ -38,13 +53,19 @@
         <div class="item">
           <a href="?action=about">Contact</a>
         </div>
+        <?php  if ($_SESSION['connected']):?>
+        <div class="item">
+          <a href="?action=about"><?php echo $_SESSION['usr'] ?></a>
+        </div>
+      <?php endif;?>
       </div>
       <div class="plus">
         <div class="display"></div>
       </div>
 
     </div>
-  </nav>
+  </nav> -->
+  <script src="js/menu.js" charset="utf-8"></script>
   <script type="text/javascript">
     $('document').ready(function() {
       $('nav').click(() => {
@@ -55,7 +76,7 @@
       $('body').animate({
         'opacity': '1'
       }, 300)
-      if(typeof curstomOnLoad !== "undefined")
+      if (typeof curstomOnLoad !== "undefined")
         curstomOnLoad()
 
     }

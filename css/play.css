@@ -4,6 +4,50 @@
   background-color: #111114;
 }
 
+.question-item img {
+  max-width: 60vw !important;
+}
+
+.replay {
+  position: absolute;
+  top: -70px;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%) rotate(-360deg);
+  width: 50px;
+  height: 50px;
+  background: whitesmoke;
+  border: 2px solid #444;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.replay.active {
+  animation-name: replay;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes replay {
+  0% {
+    top: -70px;
+    transform: translate(-50%) rotate(360deg);
+  }
+  100% {
+    top: 20px;
+    transform: translate(-50%) rotate(0deg);
+  }
+}
+
+.replay img {
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .scenario-form {
   width: 25%;
   background-color: rgba(255, 255, 255, 1);
@@ -95,20 +139,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 500vw;
-  height: 500vh;
+  width: 100vw;
+  height: 100vh;
   visibility: hidden;
-  transform: scale(.5);
-  transform-origin: 0% -20%;
+  opacity: 0;
+  overflow: hidden;
 }
 
 #grid>ul {
   list-style: none;
   position: absolute;
   padding: 0;
-  max-width: 300vw;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .grid-item {
@@ -122,7 +163,7 @@
 
 .frame-item {
   text-align: center;
-  width: 50vw;
+  width: 60vw;
   height: auto;
   background-color: rgba(255, 255, 255, .6);
   border-radius: 8px;
@@ -132,14 +173,14 @@
   top: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 20px rgb(255, 255, 255);
-  opacity: 0;
+  opacity: 1;
+  overflow: scroll;
+  max-height: 90vh;
 }
 
 .frame-item>.question-item {
-  font-size: 400%;
+  /* font-size: 400%; */
   position: relative;
-  font-weight: 300px;
-  color: whitesmoke;
 }
 
 .frame-item>ol {
@@ -154,9 +195,12 @@
   border: 2px solid rgba(0, 0, 0, .14);
   border-radius: 8px;
   background-color: rgba(0, 0, 0, .14);
-  margin: auto 0 auto 0;
+  left: 50%;
+  margin-top: 25px;
+  transform: translateX(-50%);
   font-size: 2.4em;
   color: whitesmoke;
-  width: 100%;
+  width: 120%;
   cursor: pointer;
+  padding: 5px;
 }

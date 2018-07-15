@@ -11,6 +11,15 @@ $('#login').keypress(function(e) {
     clearSpace()
 })
 
+let getNodeItemById = (id) => {
+  let itms = document.querySelectorAll('.grid-item')
+  for (let i = 0; i < itms.length; i++) {
+    if (itms[i].dataset.id === id)
+      return [itms[i], i]
+  }
+  return undefined
+}
+
 let getNodeById = (id) => {
   for (let i = 0; i < result.elements.nodes.length; i++) {
     e = result.elements.nodes[i]
@@ -19,59 +28,78 @@ let getNodeById = (id) => {
   }
   return undefined
 }
-let getNodeItemById = (id) => {
-  let itms = document.querySelectorAll('.grid-item')
-  for (let i = 0; i < itms.length; i++) {
-    if (itms[i].dataset.id === id)
-      return itms[i]
-  }
-  return undefined
-}
 let getChildren = (node) => {
   let children = []
+  if (result.elements.edges == undefined)
+    return undefined
   result.elements.edges.forEach((item) => {
     if (item.data.source == node.data.id)
       children.push([getNodeById(item.data.target), item.data.label])
   })
   return children
 }
-let viewportMoveTo = (n) => {
-  let r = $(n).attr('data-row')
-  let c = $(n).attr('data-column')
 
-  $('#grid').animate({
-    'top': 25 - 50 * r + '%',
-    'left': 25 - 50 * c + '%',
-
-  }, {
-    duration: 1200,
-    specialEasing: {
-      width: "easeOutBounce",
-      height: "easeOutBounce"
-    }
+let replay = () => {
+  $('.replay').animate({
+    'opacity': '0'
+  }, 400, function() {
+    $('.replay').toggleClass('active')
+    $('.replay').css('opacity', '1')
+    selectAnswer('1')
   })
 
-  $('#grid').transition({
-    x: -5 - 10 * c + '%',
-    y: -25 - 10 * r + '%',
-    scale: [1, 1]
-  });
-  $(n).children('.frame-item').animate({
-    'opacity': '1'
-  }, 1600)
+}
+let resetItems = (item) => {
+  if (currentShow != undefined) {
+    $(currentShow[0]).css('visibility', 'hidden')
+    $(currentShow[0]).animate({
+      'top': currentShow[1] * 100 + 'vh'
+    }, 1, function() {
+      $(currentShow[0]).css('visibility', 'visible')
+    })
+  }
+  currentShow = item
+}
+let selectAnswer = (id) => {
+
+  let item = getNodeItemById(id)
+
+  switch (result['options'].transition) {
+    case 'fade':
+      $('#grid').animate({
+          'opacity': '0'
+        }, 100,
+        function() {
+          $($('#grid ul')).css('top', -item[1] * 100 + 'vh')
+          $('#grid').animate({
+            'opacity': '1'
+          }, result['options'].duration)
+        })
+      break
+    case 'slide':
+      $($('#grid ul')).animate({
+        'top': -item[1] * 100 + 'vh'
+      }, result['options'].duration)
+
+      break
+
+  }
+  currentShow = item
+  setTimeout(() => {
+    if (currentShow[0].children[0].children[1].children.length == 0) {
+      if (!$('.replay').hasClass('active'))
+        $('.replay').addClass('active')
+
+    }
+  }, result['options'].duration)
+
 }
 
-let selectAnswer = (answerId) => {
-
-
-  $('#grid').transition({
-    x: '0%',
-    y: '0%',
-
-    scale: [.5, .5]
-  });
-
-  viewportMoveTo(getNodeItemById(answerId))
+let start = (elem) => {
+  $($('#grid ul')).css('top', -elem[1] * 100 + 'vh')
+  $('#grid').animate({
+    'opacity': '1'
+  }, 400)
 
 }
 
@@ -81,10 +109,8 @@ let createGrid = () => {
 
     let li = $('<li/>')
       .addClass('grid-item')
-      .css('background', /*'linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)) ,*/ 'url(' + item.data.bkg + ') no-repeat center fixed')
+      .css('background', 'url(' + item.data.bkg + ') no-repeat center fixed')
       .css('background-size', 'cover')
-      .attr('data-row', Math.floor(i / 3))
-      .attr('data-column', i % 3)
       .attr('data-id', item.data.id)
       .appendTo($('#grid ul'));
 
@@ -93,7 +119,7 @@ let createGrid = () => {
     img.onload = function() {
       imgLoadedCompt++
       if (imgLoadedCompt == result.elements.nodes.length) {
-        viewportMoveTo($('.grid-item:first')[0]) // LOADED? GO
+        start(getNodeItemById('1')) // LOADED? GO
       }
     }
     img.src = item.data.bkg;
@@ -103,6 +129,15 @@ let createGrid = () => {
     let frame = $('<div/>')
       .addClass('frame-item')
       .appendTo(li);
+
+    // let pr = $('<div/>').attr('data-autoscroll', 'top').appendTo(frame)
+
+    // $(li).topBottom(li)
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = 'none';
+    iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+
+
     let q = $('<div/>')
       .addClass('question-item')
       .html(item.data.content)
@@ -111,26 +146,22 @@ let createGrid = () => {
       .addClass('')
       .appendTo(frame);
 
+    let __gc = getChildren(item)
+    if (__gc != undefined) {
+      __gc.forEach((child) => {
 
-    getChildren(item).forEach((child) => {
-
-      $('<li/>')
-        .attr('data-node', child[0].data.id)
-        .attr('onclick', 'selectAnswer(\'' + child[0].data.id + '\')')
-        .addClass('answer-item')
-        .text(child[1])
-        .appendTo(ol);
-    })
+        $('<li/>')
+          .attr('data-node', child[0].data.id)
+          .attr('onclick', 'selectAnswer(\'' + child[0].data.id + '\')')
+          .addClass('answer-item')
+          .text(child[1])
+          .appendTo(ol);
+      })
+    }
     i++
   })
   $('#grid').css('visibility', 'visible')
   $('#grid').css('display', 'block')
-
-}
-
-function sleepFor(sleepDuration) {
-  var now = new Date().getTime();
-  while (new Date().getTime() < now + sleepDuration) {}
 }
 
 let clearSpace = () => {
@@ -151,6 +182,10 @@ let curstomOnLoad = () => {
     $.ajax({
       url: "?action=canIPlay&id=" + arr[arr.length - 1],
       success: function(_result) {
+        if (_result == "0x1") {
+          window.location.href = '/rpg/'
+          return
+        }
         result = JSON.parse(_result)
         $('nav').fadeOut()
         $('body').css('overflow', 'auto')

@@ -1,0 +1,2474 @@
+7B42 .START (2018-07-10 10:23:28) phpCAS-1.3.5 ****************** [CAS.php:468]
+7B42 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+7B42 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+7B42 .|    |    Starting a new session ST-42083-avco6DNSlqqk7g1eH6b5-cas01c [Client.php:932]
+7B42 .|    |    Session is not authenticated [Client.php:938]
+7B42 .|    <= ''
+7B42 .<= ''
+7B42 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+7B42 .<= ''
+7B42 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+7B42 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+7B42 .<= ''
+7B42 .=> phpCAS::forceAuthentication() [login.php:14]
+7B42 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7B42 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7B42 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7B42 .|    |    |    |    no user found [Client.php:1635]
+7B42 .|    |    |    <= false
+7B42 .|    |    |    no ticket found [Client.php:1494]
+7B42 .|    |    <= false
+7B42 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+7B42 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+7B42 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+7B42 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+7B42 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+7B42 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+7B42 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+7B42 .|    |    |    exit()
+7B42 .|    |    |    -
+7B42 .|    |    -
+7B42 .|    -
+F7F4 .START (2018-07-10 10:23:31) phpCAS-1.3.5 ****************** [CAS.php:468]
+F7F4 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+F7F4 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+F7F4 .|    |    Starting a new session ST-42083-avco6DNSlqqk7g1eH6b5-cas01c [Client.php:932]
+F7F4 .|    |    Session is not authenticated [Client.php:938]
+F7F4 .|    |    Ticket 'ST-42839-I53HbGcUN0wh1eHig47f-cas01c' found [Client.php:1020]
+F7F4 .|    <= ''
+F7F4 .<= ''
+F7F4 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+F7F4 .<= ''
+F7F4 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+F7F4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+F7F4 .<= ''
+F7F4 .=> phpCAS::forceAuthentication() [login.php:14]
+F7F4 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+F7F4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+F7F4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+F7F4 .|    |    |    |    no user found [Client.php:1635]
+F7F4 .|    |    |    <= false
+F7F4 .|    |    |    CAS 2.0 ticket `ST-42839-I53HbGcUN0wh1eHig47f-cas01c' is present [Client.php:1446]
+F7F4 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+F7F4 .|    |    |    |     [Client.php:3169]
+F7F4 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+F7F4 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+F7F4 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+F7F4 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+F7F4 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+F7F4 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-42839-I53HbGcUN0wh1eHig47f-cas01c', NULL, NULL, NULL) [Client.php:3191]
+F7F4 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+F7F4 .|    |    |    |    |    |    Response Body: 
+F7F4 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+F7F4 .|    |    |    |    |    |        <cas:authenticationSuccess>
+F7F4 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+F7F4 .|    |    |    |    |    |            </cas:authenticationSuccess>
+F7F4 .|    |    |    |    |    |    </cas:serviceResponse>
+F7F4 .|    |    |    |    |    |    
+F7F4 .|    |    |    |    |    |     [CurlRequest.php:84]
+F7F4 .|    |    |    |    |    <= true
+F7F4 .|    |    |    |    <= true
+F7F4 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+F7F4 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+F7F4 .|    |    |    |    <= ''
+F7F4 .|    |    |    |    Storing Proxy List [Client.php:3270]
+F7F4 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+F7F4 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+F7F4 .|    |    |    |    <= true
+F7F4 .|    |    |    |    => CAS_Client::_renameSession('ST-42839-I53HbGcUN0wh1eHig47f-cas01c') [Client.php:3293]
+F7F4 .|    |    |    |    |    Killing session: ST-42083-avco6DNSlqqk7g1eH6b5-cas01c [Client.php:3682]
+F7F4 .|    |    |    |    |    Starting session: ST-42839-I53HbGcUN0wh1eHig47f-cas01c [Client.php:3686]
+F7F4 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+F7F4 .|    |    |    |    <= ''
+F7F4 .|    |    |    <= true
+F7F4 .|    |    |    CAS 2.0 ticket `ST-42839-I53HbGcUN0wh1eHig47f-cas01c' was validated [Client.php:1452]
+F7F4 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+F7F4 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+F7F4 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+F7F4 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+F7F4 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+F7F4 .|    |    |    exit()
+F7F4 .|    |    |    -
+F7F4 .|    |    -
+F7F4 .|    -
+42A3 .START (2018-07-10 10:23:31) phpCAS-1.3.5 ****************** [CAS.php:468]
+42A3 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+42A3 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+42A3 .|    |    Starting a new session ST-42839-I53HbGcUN0wh1eHig47f-cas01c [Client.php:932]
+42A3 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+42A3 .|    <= ''
+42A3 .<= ''
+42A3 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+42A3 .<= ''
+42A3 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+42A3 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+42A3 .<= ''
+42A3 .=> phpCAS::forceAuthentication() [login.php:14]
+42A3 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+42A3 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+42A3 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+42A3 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+42A3 .|    |    |    <= true
+42A3 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+42A3 .|    |    <= true
+42A3 .|    |    no need to authenticate [Client.php:1282]
+42A3 .|    <= true
+42A3 .<= ''
+42A3 .=> phpCAS::checkAuthentication() [login.php:16]
+42A3 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+42A3 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+42A3 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+42A3 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+42A3 .|    |    |    <= true
+42A3 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+42A3 .|    |    <= true
+42A3 .|    |    user is authenticated [Client.php:1332]
+42A3 .|    <= true
+42A3 .<= true
+9B8D .START (2018-07-10 12:04:54) phpCAS-1.3.5 ****************** [CAS.php:468]
+9B8D .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+9B8D .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+9B8D .|    |    Starting a new session ST-42839-I53HbGcUN0wh1eHig47f-cas01c [Client.php:932]
+9B8D .|    |    Session is not authenticated [Client.php:938]
+9B8D .|    <= ''
+9B8D .<= ''
+9B8D .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+9B8D .<= ''
+9B8D .=> phpCAS::setNoCasServerValidation() [login.php:12]
+9B8D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+9B8D .<= ''
+9B8D .=> phpCAS::forceAuthentication() [login.php:14]
+9B8D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+9B8D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+9B8D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+9B8D .|    |    |    |    no user found [Client.php:1635]
+9B8D .|    |    |    <= false
+9B8D .|    |    |    no ticket found [Client.php:1494]
+9B8D .|    |    <= false
+9B8D .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+9B8D .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+9B8D .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+9B8D .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+9B8D .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+9B8D .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+9B8D .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+9B8D .|    |    |    exit()
+9B8D .|    |    |    -
+9B8D .|    |    -
+9B8D .|    -
+03C4 .START (2018-07-10 12:05:05) phpCAS-1.3.5 ****************** [CAS.php:468]
+03C4 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+03C4 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+03C4 .|    |    Starting a new session ST-42839-I53HbGcUN0wh1eHig47f-cas01c [Client.php:932]
+03C4 .|    |    Session is not authenticated [Client.php:938]
+03C4 .|    <= ''
+03C4 .<= ''
+03C4 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+03C4 .<= ''
+03C4 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+03C4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+03C4 .<= ''
+03C4 .=> phpCAS::forceAuthentication() [login.php:14]
+03C4 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+03C4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+03C4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+03C4 .|    |    |    |    no user found [Client.php:1635]
+03C4 .|    |    |    <= false
+03C4 .|    |    |    no ticket found [Client.php:1494]
+03C4 .|    |    <= false
+03C4 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+03C4 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+03C4 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+03C4 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+03C4 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+03C4 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+03C4 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+03C4 .|    |    |    exit()
+03C4 .|    |    |    -
+03C4 .|    |    -
+03C4 .|    -
+C61C .START (2018-07-10 12:05:22) phpCAS-1.3.5 ****************** [CAS.php:468]
+C61C .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+C61C .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+C61C .|    |    Starting a new session ST-42839-I53HbGcUN0wh1eHig47f-cas01c [Client.php:932]
+C61C .|    |    Session is not authenticated [Client.php:938]
+C61C .|    |    Ticket 'ST-43569-EUVwbwABRJRL9R95BdST-cas01c' found [Client.php:1020]
+C61C .|    <= ''
+C61C .<= ''
+C61C .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+C61C .<= ''
+C61C .=> phpCAS::setNoCasServerValidation() [login.php:12]
+C61C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+C61C .<= ''
+C61C .=> phpCAS::forceAuthentication() [login.php:14]
+C61C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+C61C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+C61C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C61C .|    |    |    |    no user found [Client.php:1635]
+C61C .|    |    |    <= false
+C61C .|    |    |    CAS 2.0 ticket `ST-43569-EUVwbwABRJRL9R95BdST-cas01c' is present [Client.php:1446]
+C61C .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+C61C .|    |    |    |     [Client.php:3169]
+C61C .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+C61C .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+C61C .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+C61C .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+C61C .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+C61C .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-43569-EUVwbwABRJRL9R95BdST-cas01c', NULL, NULL, NULL) [Client.php:3191]
+C61C .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+C61C .|    |    |    |    |    |    Response Body: 
+C61C .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+C61C .|    |    |    |    |    |        <cas:authenticationSuccess>
+C61C .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+C61C .|    |    |    |    |    |            </cas:authenticationSuccess>
+C61C .|    |    |    |    |    |    </cas:serviceResponse>
+C61C .|    |    |    |    |    |    
+C61C .|    |    |    |    |    |     [CurlRequest.php:84]
+C61C .|    |    |    |    |    <= true
+C61C .|    |    |    |    <= true
+C61C .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+C61C .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+C61C .|    |    |    |    <= ''
+C61C .|    |    |    |    Storing Proxy List [Client.php:3270]
+C61C .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+C61C .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+C61C .|    |    |    |    <= true
+C61C .|    |    |    |    => CAS_Client::_renameSession('ST-43569-EUVwbwABRJRL9R95BdST-cas01c') [Client.php:3293]
+C61C .|    |    |    |    |    Killing session: ST-42839-I53HbGcUN0wh1eHig47f-cas01c [Client.php:3682]
+C61C .|    |    |    |    |    Starting session: ST-43569-EUVwbwABRJRL9R95BdST-cas01c [Client.php:3686]
+C61C .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+C61C .|    |    |    |    <= ''
+C61C .|    |    |    <= true
+C61C .|    |    |    CAS 2.0 ticket `ST-43569-EUVwbwABRJRL9R95BdST-cas01c' was validated [Client.php:1452]
+C61C .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+C61C .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+C61C .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+C61C .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+C61C .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+C61C .|    |    |    exit()
+C61C .|    |    |    -
+C61C .|    |    -
+C61C .|    -
+B39A .START (2018-07-10 12:05:22) phpCAS-1.3.5 ****************** [CAS.php:468]
+B39A .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+B39A .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+B39A .|    |    Starting a new session ST-43569-EUVwbwABRJRL9R95BdST-cas01c [Client.php:932]
+B39A .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+B39A .|    <= ''
+B39A .<= ''
+B39A .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+B39A .<= ''
+B39A .=> phpCAS::setNoCasServerValidation() [login.php:12]
+B39A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+B39A .<= ''
+B39A .=> phpCAS::forceAuthentication() [login.php:14]
+B39A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+B39A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+B39A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B39A .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+B39A .|    |    |    <= true
+B39A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+B39A .|    |    <= true
+B39A .|    |    no need to authenticate [Client.php:1282]
+B39A .|    <= true
+B39A .<= ''
+B39A .=> phpCAS::checkAuthentication() [login.php:16]
+B39A .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+B39A .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+B39A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+B39A .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+B39A .|    |    |    <= true
+B39A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+B39A .|    |    <= true
+B39A .|    |    user is authenticated [Client.php:1332]
+B39A .|    <= true
+B39A .<= true
+3F8B .START (2018-07-10 18:55:45) phpCAS-1.3.5 ****************** [CAS.php:468]
+3F8B .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+3F8B .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+3F8B .|    |    Starting a new session evls743mes7ieu97fualmrg3n5 [Client.php:932]
+3F8B .|    |    Session is not authenticated [Client.php:938]
+3F8B .|    <= ''
+3F8B .<= ''
+3F8B .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+3F8B .<= ''
+3F8B .=> phpCAS::setNoCasServerValidation() [login.php:12]
+3F8B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3F8B .<= ''
+3F8B .=> phpCAS::forceAuthentication() [login.php:14]
+3F8B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3F8B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3F8B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3F8B .|    |    |    |    no user found [Client.php:1635]
+3F8B .|    |    |    <= false
+3F8B .|    |    |    no ticket found [Client.php:1494]
+3F8B .|    |    <= false
+3F8B .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+3F8B .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+3F8B .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+3F8B .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+3F8B .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3F8B .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+3F8B .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+3F8B .|    |    |    exit()
+3F8B .|    |    |    -
+3F8B .|    |    -
+3F8B .|    -
+03B6 .START (2018-07-10 18:55:50) phpCAS-1.3.5 ****************** [CAS.php:468]
+03B6 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+03B6 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+03B6 .|    |    Starting a new session evls743mes7ieu97fualmrg3n5 [Client.php:932]
+03B6 .|    |    Session is not authenticated [Client.php:938]
+03B6 .|    |    Ticket 'ST-45765-tyYrYkQZeaSNE5yEOls9-cas01c' found [Client.php:1020]
+03B6 .|    <= ''
+03B6 .<= ''
+03B6 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+03B6 .<= ''
+03B6 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+03B6 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+03B6 .<= ''
+03B6 .=> phpCAS::forceAuthentication() [login.php:14]
+03B6 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+03B6 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+03B6 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+03B6 .|    |    |    |    no user found [Client.php:1635]
+03B6 .|    |    |    <= false
+03B6 .|    |    |    CAS 2.0 ticket `ST-45765-tyYrYkQZeaSNE5yEOls9-cas01c' is present [Client.php:1446]
+03B6 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+03B6 .|    |    |    |     [Client.php:3169]
+03B6 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+03B6 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+03B6 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+03B6 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+03B6 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+03B6 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-45765-tyYrYkQZeaSNE5yEOls9-cas01c', NULL, NULL, NULL) [Client.php:3191]
+03B6 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+03B6 .|    |    |    |    |    |    Response Body: 
+03B6 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+03B6 .|    |    |    |    |    |        <cas:authenticationSuccess>
+03B6 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+03B6 .|    |    |    |    |    |            </cas:authenticationSuccess>
+03B6 .|    |    |    |    |    |    </cas:serviceResponse>
+03B6 .|    |    |    |    |    |    
+03B6 .|    |    |    |    |    |     [CurlRequest.php:84]
+03B6 .|    |    |    |    |    <= true
+03B6 .|    |    |    |    <= true
+03B6 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+03B6 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+03B6 .|    |    |    |    <= ''
+03B6 .|    |    |    |    Storing Proxy List [Client.php:3270]
+03B6 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+03B6 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+03B6 .|    |    |    |    <= true
+03B6 .|    |    |    |    => CAS_Client::_renameSession('ST-45765-tyYrYkQZeaSNE5yEOls9-cas01c') [Client.php:3293]
+03B6 .|    |    |    |    |    Killing session: evls743mes7ieu97fualmrg3n5 [Client.php:3682]
+03B6 .|    |    |    |    |    Starting session: ST-45765-tyYrYkQZeaSNE5yEOls9-cas01c [Client.php:3686]
+03B6 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+03B6 .|    |    |    |    <= ''
+03B6 .|    |    |    <= true
+03B6 .|    |    |    CAS 2.0 ticket `ST-45765-tyYrYkQZeaSNE5yEOls9-cas01c' was validated [Client.php:1452]
+03B6 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+03B6 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+03B6 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+03B6 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+03B6 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+03B6 .|    |    |    exit()
+03B6 .|    |    |    -
+03B6 .|    |    -
+03B6 .|    -
+4309 .START (2018-07-10 18:55:50) phpCAS-1.3.5 ****************** [CAS.php:468]
+4309 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+4309 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+4309 .|    |    Starting a new session ST-45765-tyYrYkQZeaSNE5yEOls9-cas01c [Client.php:932]
+4309 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+4309 .|    <= ''
+4309 .<= ''
+4309 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+4309 .<= ''
+4309 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+4309 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+4309 .<= ''
+4309 .=> phpCAS::forceAuthentication() [login.php:14]
+4309 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4309 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4309 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4309 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+4309 .|    |    |    <= true
+4309 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+4309 .|    |    <= true
+4309 .|    |    no need to authenticate [Client.php:1282]
+4309 .|    <= true
+4309 .<= ''
+4309 .=> phpCAS::checkAuthentication() [login.php:16]
+4309 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+4309 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+4309 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4309 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+4309 .|    |    |    <= true
+4309 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+4309 .|    |    <= true
+4309 .|    |    user is authenticated [Client.php:1332]
+4309 .|    <= true
+4309 .<= true
+3E83 .START (2018-07-10 20:15:40) phpCAS-1.3.5 ****************** [CAS.php:468]
+3E83 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+3E83 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+3E83 .|    |    Starting a new session ST-43569-EUVwbwABRJRL9R95BdST-cas01c [Client.php:932]
+3E83 .|    |    Session is not authenticated [Client.php:938]
+3E83 .|    <= ''
+3E83 .<= ''
+3E83 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+3E83 .<= ''
+3E83 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+3E83 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3E83 .<= ''
+3E83 .=> phpCAS::forceAuthentication() [login.php:14]
+3E83 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3E83 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3E83 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3E83 .|    |    |    |    no user found [Client.php:1635]
+3E83 .|    |    |    <= false
+3E83 .|    |    |    no ticket found [Client.php:1494]
+3E83 .|    |    <= false
+3E83 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+3E83 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+3E83 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+3E83 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+3E83 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3E83 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+3E83 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+3E83 .|    |    |    exit()
+3E83 .|    |    |    -
+3E83 .|    |    -
+3E83 .|    -
+8D86 .START (2018-07-10 20:16:04) phpCAS-1.3.5 ****************** [CAS.php:468]
+8D86 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+8D86 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+8D86 .|    |    Starting a new session ST-43569-EUVwbwABRJRL9R95BdST-cas01c [Client.php:932]
+8D86 .|    |    Session is not authenticated [Client.php:938]
+8D86 .|    |    Ticket 'ST-45889-VFSWrf0nscDAMT5wpMiD-cas01c' found [Client.php:1020]
+8D86 .|    <= ''
+8D86 .<= ''
+8D86 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+8D86 .<= ''
+8D86 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+8D86 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+8D86 .<= ''
+8D86 .=> phpCAS::forceAuthentication() [login.php:14]
+8D86 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8D86 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8D86 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8D86 .|    |    |    |    no user found [Client.php:1635]
+8D86 .|    |    |    <= false
+8D86 .|    |    |    CAS 2.0 ticket `ST-45889-VFSWrf0nscDAMT5wpMiD-cas01c' is present [Client.php:1446]
+8D86 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+8D86 .|    |    |    |     [Client.php:3169]
+8D86 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+8D86 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+8D86 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+8D86 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+8D86 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+8D86 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-45889-VFSWrf0nscDAMT5wpMiD-cas01c', NULL, NULL, NULL) [Client.php:3191]
+8D86 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+8D86 .|    |    |    |    |    |    Response Body: 
+8D86 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+8D86 .|    |    |    |    |    |        <cas:authenticationSuccess>
+8D86 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+8D86 .|    |    |    |    |    |            </cas:authenticationSuccess>
+8D86 .|    |    |    |    |    |    </cas:serviceResponse>
+8D86 .|    |    |    |    |    |    
+8D86 .|    |    |    |    |    |     [CurlRequest.php:84]
+8D86 .|    |    |    |    |    <= true
+8D86 .|    |    |    |    <= true
+8D86 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+8D86 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+8D86 .|    |    |    |    <= ''
+8D86 .|    |    |    |    Storing Proxy List [Client.php:3270]
+8D86 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+8D86 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+8D86 .|    |    |    |    <= true
+8D86 .|    |    |    |    => CAS_Client::_renameSession('ST-45889-VFSWrf0nscDAMT5wpMiD-cas01c') [Client.php:3293]
+8D86 .|    |    |    |    |    Killing session: ST-43569-EUVwbwABRJRL9R95BdST-cas01c [Client.php:3682]
+8D86 .|    |    |    |    |    Starting session: ST-45889-VFSWrf0nscDAMT5wpMiD-cas01c [Client.php:3686]
+8D86 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+8D86 .|    |    |    |    <= ''
+8D86 .|    |    |    <= true
+8D86 .|    |    |    CAS 2.0 ticket `ST-45889-VFSWrf0nscDAMT5wpMiD-cas01c' was validated [Client.php:1452]
+8D86 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+8D86 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+8D86 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+8D86 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+8D86 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+8D86 .|    |    |    exit()
+8D86 .|    |    |    -
+8D86 .|    |    -
+8D86 .|    -
+E479 .START (2018-07-10 20:16:04) phpCAS-1.3.5 ****************** [CAS.php:468]
+E479 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+E479 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+E479 .|    |    Starting a new session ST-45889-VFSWrf0nscDAMT5wpMiD-cas01c [Client.php:932]
+E479 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+E479 .|    <= ''
+E479 .<= ''
+E479 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+E479 .<= ''
+E479 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+E479 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+E479 .<= ''
+E479 .=> phpCAS::forceAuthentication() [login.php:14]
+E479 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E479 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E479 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E479 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+E479 .|    |    |    <= true
+E479 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+E479 .|    |    <= true
+E479 .|    |    no need to authenticate [Client.php:1282]
+E479 .|    <= true
+E479 .<= ''
+E479 .=> phpCAS::checkAuthentication() [login.php:16]
+E479 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+E479 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+E479 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E479 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+E479 .|    |    |    <= true
+E479 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+E479 .|    |    <= true
+E479 .|    |    user is authenticated [Client.php:1332]
+E479 .|    <= true
+E479 .<= true
+4D05 .START (2018-07-11 07:39:45) phpCAS-1.3.5 ****************** [CAS.php:468]
+4D05 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+4D05 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+4D05 .|    |    Starting a new session 1iq406anncdtbgornpk3lh1hf5 [Client.php:932]
+4D05 .|    |    Session is not authenticated [Client.php:938]
+4D05 .|    <= ''
+4D05 .<= ''
+4D05 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+4D05 .<= ''
+4D05 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+4D05 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+4D05 .<= ''
+4D05 .=> phpCAS::forceAuthentication() [login.php:14]
+4D05 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4D05 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4D05 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4D05 .|    |    |    |    no user found [Client.php:1635]
+4D05 .|    |    |    <= false
+4D05 .|    |    |    no ticket found [Client.php:1494]
+4D05 .|    |    <= false
+4D05 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+4D05 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+4D05 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+4D05 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+4D05 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+4D05 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+4D05 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+4D05 .|    |    |    exit()
+4D05 .|    |    |    -
+4D05 .|    |    -
+4D05 .|    -
+965B .START (2018-07-11 07:40:00) phpCAS-1.3.5 ****************** [CAS.php:468]
+965B .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+965B .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+965B .|    |    Starting a new session 1iq406anncdtbgornpk3lh1hf5 [Client.php:932]
+965B .|    |    Session is not authenticated [Client.php:938]
+965B .|    |    Ticket 'ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c' found [Client.php:1020]
+965B .|    <= ''
+965B .<= ''
+965B .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+965B .<= ''
+965B .=> phpCAS::setNoCasServerValidation() [login.php:12]
+965B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+965B .<= ''
+965B .=> phpCAS::forceAuthentication() [login.php:14]
+965B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+965B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+965B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+965B .|    |    |    |    no user found [Client.php:1635]
+965B .|    |    |    <= false
+965B .|    |    |    CAS 2.0 ticket `ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c' is present [Client.php:1446]
+965B .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+965B .|    |    |    |     [Client.php:3169]
+965B .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+965B .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+965B .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+965B .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+965B .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+965B .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c', NULL, NULL, NULL) [Client.php:3191]
+965B .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+965B .|    |    |    |    |    |    Response Body: 
+965B .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+965B .|    |    |    |    |    |        <cas:authenticationSuccess>
+965B .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+965B .|    |    |    |    |    |            </cas:authenticationSuccess>
+965B .|    |    |    |    |    |    </cas:serviceResponse>
+965B .|    |    |    |    |    |    
+965B .|    |    |    |    |    |     [CurlRequest.php:84]
+965B .|    |    |    |    |    <= true
+965B .|    |    |    |    <= true
+965B .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+965B .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+965B .|    |    |    |    <= ''
+965B .|    |    |    |    Storing Proxy List [Client.php:3270]
+965B .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+965B .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+965B .|    |    |    |    <= true
+965B .|    |    |    |    => CAS_Client::_renameSession('ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c') [Client.php:3293]
+965B .|    |    |    |    |    Killing session: 1iq406anncdtbgornpk3lh1hf5 [Client.php:3682]
+965B .|    |    |    |    |    Starting session: ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c [Client.php:3686]
+965B .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+965B .|    |    |    |    <= ''
+965B .|    |    |    <= true
+965B .|    |    |    CAS 2.0 ticket `ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c' was validated [Client.php:1452]
+965B .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+965B .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+965B .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+965B .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+965B .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+965B .|    |    |    exit()
+965B .|    |    |    -
+965B .|    |    -
+965B .|    -
+4866 .START (2018-07-11 07:40:00) phpCAS-1.3.5 ****************** [CAS.php:468]
+4866 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+4866 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+4866 .|    |    Starting a new session ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c [Client.php:932]
+4866 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+4866 .|    <= ''
+4866 .<= ''
+4866 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+4866 .<= ''
+4866 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+4866 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+4866 .<= ''
+4866 .=> phpCAS::forceAuthentication() [login.php:14]
+4866 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4866 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4866 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4866 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+4866 .|    |    |    <= true
+4866 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+4866 .|    |    <= true
+4866 .|    |    no need to authenticate [Client.php:1282]
+4866 .|    <= true
+4866 .<= ''
+4866 .=> phpCAS::checkAuthentication() [login.php:16]
+4866 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+4866 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+4866 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4866 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+4866 .|    |    |    <= true
+4866 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+4866 .|    |    <= true
+4866 .|    |    user is authenticated [Client.php:1332]
+4866 .|    <= true
+4866 .<= true
+7757 .START (2018-07-11 14:02:45) phpCAS-1.3.5 ****************** [CAS.php:468]
+7757 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+7757 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+7757 .|    |    Starting a new session ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c [Client.php:932]
+7757 .|    |    Session is not authenticated [Client.php:938]
+7757 .|    <= ''
+7757 .<= ''
+7757 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+7757 .<= ''
+7757 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+7757 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+7757 .<= ''
+7757 .=> phpCAS::forceAuthentication() [login.php:14]
+7757 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7757 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7757 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7757 .|    |    |    |    no user found [Client.php:1635]
+7757 .|    |    |    <= false
+7757 .|    |    |    no ticket found [Client.php:1494]
+7757 .|    |    <= false
+7757 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+7757 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+7757 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+7757 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+7757 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+7757 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+7757 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+7757 .|    |    |    exit()
+7757 .|    |    |    -
+7757 .|    |    -
+7757 .|    -
+3E14 .START (2018-07-11 14:03:04) phpCAS-1.3.5 ****************** [CAS.php:468]
+3E14 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+3E14 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+3E14 .|    |    Starting a new session ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c [Client.php:932]
+3E14 .|    |    Session is not authenticated [Client.php:938]
+3E14 .|    |    Ticket 'ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c' found [Client.php:1020]
+3E14 .|    <= ''
+3E14 .<= ''
+3E14 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+3E14 .<= ''
+3E14 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+3E14 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3E14 .<= ''
+3E14 .=> phpCAS::forceAuthentication() [login.php:14]
+3E14 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3E14 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3E14 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3E14 .|    |    |    |    no user found [Client.php:1635]
+3E14 .|    |    |    <= false
+3E14 .|    |    |    CAS 2.0 ticket `ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c' is present [Client.php:1446]
+3E14 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+3E14 .|    |    |    |     [Client.php:3169]
+3E14 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+3E14 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+3E14 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+3E14 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3E14 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+3E14 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c', NULL, NULL, NULL) [Client.php:3191]
+3E14 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+3E14 .|    |    |    |    |    |    Response Body: 
+3E14 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3E14 .|    |    |    |    |    |        <cas:authenticationSuccess>
+3E14 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+3E14 .|    |    |    |    |    |            </cas:authenticationSuccess>
+3E14 .|    |    |    |    |    |    </cas:serviceResponse>
+3E14 .|    |    |    |    |    |    
+3E14 .|    |    |    |    |    |     [CurlRequest.php:84]
+3E14 .|    |    |    |    |    <= true
+3E14 .|    |    |    |    <= true
+3E14 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+3E14 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+3E14 .|    |    |    |    <= ''
+3E14 .|    |    |    |    Storing Proxy List [Client.php:3270]
+3E14 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+3E14 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+3E14 .|    |    |    |    <= true
+3E14 .|    |    |    |    => CAS_Client::_renameSession('ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c') [Client.php:3293]
+3E14 .|    |    |    |    |    Killing session: ST-47024-GwCWcw1g5omUhfs9ns4w-cas01c [Client.php:3682]
+3E14 .|    |    |    |    |    Starting session: ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c [Client.php:3686]
+3E14 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+3E14 .|    |    |    |    <= ''
+3E14 .|    |    |    <= true
+3E14 .|    |    |    CAS 2.0 ticket `ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c' was validated [Client.php:1452]
+3E14 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+3E14 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3E14 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+3E14 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+3E14 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3E14 .|    |    |    exit()
+3E14 .|    |    |    -
+3E14 .|    |    -
+3E14 .|    -
+CAFE .START (2018-07-11 14:03:05) phpCAS-1.3.5 ****************** [CAS.php:468]
+CAFE .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+CAFE .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+CAFE .|    |    Starting a new session ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c [Client.php:932]
+CAFE .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+CAFE .|    <= ''
+CAFE .<= ''
+CAFE .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+CAFE .<= ''
+CAFE .=> phpCAS::setNoCasServerValidation() [login.php:12]
+CAFE .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+CAFE .<= ''
+CAFE .=> phpCAS::forceAuthentication() [login.php:14]
+CAFE .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+CAFE .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+CAFE .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+CAFE .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+CAFE .|    |    |    <= true
+CAFE .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+CAFE .|    |    <= true
+CAFE .|    |    no need to authenticate [Client.php:1282]
+CAFE .|    <= true
+CAFE .<= ''
+CAFE .=> phpCAS::checkAuthentication() [login.php:16]
+CAFE .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+CAFE .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+CAFE .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+CAFE .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+CAFE .|    |    |    <= true
+CAFE .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+CAFE .|    |    <= true
+CAFE .|    |    user is authenticated [Client.php:1332]
+CAFE .|    <= true
+CAFE .<= true
+09BA .START (2018-07-11 15:13:13) phpCAS-1.3.5 ****************** [CAS.php:468]
+09BA .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+09BA .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+09BA .|    |    Starting a new session ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c [Client.php:932]
+09BA .|    |    Session is not authenticated [Client.php:938]
+09BA .|    <= ''
+09BA .<= ''
+09BA .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+09BA .<= ''
+09BA .=> phpCAS::setNoCasServerValidation() [login.php:12]
+09BA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+09BA .<= ''
+09BA .=> phpCAS::forceAuthentication() [login.php:14]
+09BA .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+09BA .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+09BA .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+09BA .|    |    |    |    no user found [Client.php:1635]
+09BA .|    |    |    <= false
+09BA .|    |    |    no ticket found [Client.php:1494]
+09BA .|    |    <= false
+09BA .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+09BA .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+09BA .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+09BA .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+09BA .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+09BA .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+09BA .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+09BA .|    |    |    exit()
+09BA .|    |    |    -
+09BA .|    |    -
+09BA .|    -
+AE91 .START (2018-07-11 15:13:13) phpCAS-1.3.5 ****************** [CAS.php:468]
+AE91 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+AE91 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+AE91 .|    |    Starting a new session ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c [Client.php:932]
+AE91 .|    |    Session is not authenticated [Client.php:938]
+AE91 .|    |    Ticket 'ST-50028-5rEYTOioN0ollWBx9dTx-cas01c' found [Client.php:1020]
+AE91 .|    <= ''
+AE91 .<= ''
+AE91 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+AE91 .<= ''
+AE91 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+AE91 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+AE91 .<= ''
+AE91 .=> phpCAS::forceAuthentication() [login.php:14]
+AE91 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+AE91 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+AE91 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+AE91 .|    |    |    |    no user found [Client.php:1635]
+AE91 .|    |    |    <= false
+AE91 .|    |    |    CAS 2.0 ticket `ST-50028-5rEYTOioN0ollWBx9dTx-cas01c' is present [Client.php:1446]
+AE91 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+AE91 .|    |    |    |     [Client.php:3169]
+AE91 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+AE91 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+AE91 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+AE91 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+AE91 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+AE91 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-50028-5rEYTOioN0ollWBx9dTx-cas01c', NULL, NULL, NULL) [Client.php:3191]
+AE91 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+AE91 .|    |    |    |    |    |    Response Body: 
+AE91 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+AE91 .|    |    |    |    |    |        <cas:authenticationSuccess>
+AE91 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+AE91 .|    |    |    |    |    |            </cas:authenticationSuccess>
+AE91 .|    |    |    |    |    |    </cas:serviceResponse>
+AE91 .|    |    |    |    |    |    
+AE91 .|    |    |    |    |    |     [CurlRequest.php:84]
+AE91 .|    |    |    |    |    <= true
+AE91 .|    |    |    |    <= true
+AE91 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+AE91 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+AE91 .|    |    |    |    <= ''
+AE91 .|    |    |    |    Storing Proxy List [Client.php:3270]
+AE91 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+AE91 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+AE91 .|    |    |    |    <= true
+AE91 .|    |    |    |    => CAS_Client::_renameSession('ST-50028-5rEYTOioN0ollWBx9dTx-cas01c') [Client.php:3293]
+AE91 .|    |    |    |    |    Killing session: ST-49591-YFOWL3vwEBPJaaLteXq6-cas01c [Client.php:3682]
+AE91 .|    |    |    |    |    Starting session: ST-50028-5rEYTOioN0ollWBx9dTx-cas01c [Client.php:3686]
+AE91 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+AE91 .|    |    |    |    <= ''
+AE91 .|    |    |    <= true
+AE91 .|    |    |    CAS 2.0 ticket `ST-50028-5rEYTOioN0ollWBx9dTx-cas01c' was validated [Client.php:1452]
+AE91 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+AE91 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+AE91 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+AE91 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+AE91 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+AE91 .|    |    |    exit()
+AE91 .|    |    |    -
+AE91 .|    |    -
+AE91 .|    -
+8E41 .START (2018-07-11 15:13:13) phpCAS-1.3.5 ****************** [CAS.php:468]
+8E41 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+8E41 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+8E41 .|    |    Starting a new session ST-50028-5rEYTOioN0ollWBx9dTx-cas01c [Client.php:932]
+8E41 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+8E41 .|    <= ''
+8E41 .<= ''
+8E41 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+8E41 .<= ''
+8E41 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+8E41 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+8E41 .<= ''
+8E41 .=> phpCAS::forceAuthentication() [login.php:14]
+8E41 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8E41 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8E41 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8E41 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+8E41 .|    |    |    <= true
+8E41 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+8E41 .|    |    <= true
+8E41 .|    |    no need to authenticate [Client.php:1282]
+8E41 .|    <= true
+8E41 .<= ''
+8E41 .=> phpCAS::checkAuthentication() [login.php:16]
+8E41 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+8E41 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+8E41 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8E41 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+8E41 .|    |    |    <= true
+8E41 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+8E41 .|    |    <= true
+8E41 .|    |    user is authenticated [Client.php:1332]
+8E41 .|    <= true
+8E41 .<= true
+6383 .START (2018-07-11 15:46:03) phpCAS-1.3.5 ****************** [CAS.php:468]
+6383 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+6383 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+6383 .|    |    Starting a new session ST-50028-5rEYTOioN0ollWBx9dTx-cas01c [Client.php:932]
+6383 .|    |    Session is not authenticated [Client.php:938]
+6383 .|    <= ''
+6383 .<= ''
+6383 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+6383 .<= ''
+6383 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+6383 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+6383 .<= ''
+6383 .=> phpCAS::forceAuthentication() [login.php:14]
+6383 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+6383 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+6383 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+6383 .|    |    |    |    no user found [Client.php:1635]
+6383 .|    |    |    <= false
+6383 .|    |    |    no ticket found [Client.php:1494]
+6383 .|    |    <= false
+6383 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+6383 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+6383 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+6383 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+6383 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+6383 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+6383 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+6383 .|    |    |    exit()
+6383 .|    |    |    -
+6383 .|    |    -
+6383 .|    -
+21D8 .START (2018-07-11 15:46:04) phpCAS-1.3.5 ****************** [CAS.php:468]
+21D8 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+21D8 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+21D8 .|    |    Starting a new session ST-50028-5rEYTOioN0ollWBx9dTx-cas01c [Client.php:932]
+21D8 .|    |    Session is not authenticated [Client.php:938]
+21D8 .|    |    Ticket 'ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c' found [Client.php:1020]
+21D8 .|    <= ''
+21D8 .<= ''
+21D8 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+21D8 .<= ''
+21D8 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+21D8 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+21D8 .<= ''
+21D8 .=> phpCAS::forceAuthentication() [login.php:14]
+21D8 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+21D8 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+21D8 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+21D8 .|    |    |    |    no user found [Client.php:1635]
+21D8 .|    |    |    <= false
+21D8 .|    |    |    CAS 2.0 ticket `ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c' is present [Client.php:1446]
+21D8 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+21D8 .|    |    |    |     [Client.php:3169]
+21D8 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+21D8 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+21D8 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+21D8 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+21D8 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+21D8 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c', NULL, NULL, NULL) [Client.php:3191]
+21D8 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+21D8 .|    |    |    |    |    |    Response Body: 
+21D8 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+21D8 .|    |    |    |    |    |        <cas:authenticationSuccess>
+21D8 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+21D8 .|    |    |    |    |    |            </cas:authenticationSuccess>
+21D8 .|    |    |    |    |    |    </cas:serviceResponse>
+21D8 .|    |    |    |    |    |    
+21D8 .|    |    |    |    |    |     [CurlRequest.php:84]
+21D8 .|    |    |    |    |    <= true
+21D8 .|    |    |    |    <= true
+21D8 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+21D8 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+21D8 .|    |    |    |    <= ''
+21D8 .|    |    |    |    Storing Proxy List [Client.php:3270]
+21D8 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+21D8 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+21D8 .|    |    |    |    <= true
+21D8 .|    |    |    |    => CAS_Client::_renameSession('ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c') [Client.php:3293]
+21D8 .|    |    |    |    |    Killing session: ST-50028-5rEYTOioN0ollWBx9dTx-cas01c [Client.php:3682]
+21D8 .|    |    |    |    |    Starting session: ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c [Client.php:3686]
+21D8 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+21D8 .|    |    |    |    <= ''
+21D8 .|    |    |    <= true
+21D8 .|    |    |    CAS 2.0 ticket `ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c' was validated [Client.php:1452]
+21D8 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+21D8 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+21D8 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+21D8 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+21D8 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+21D8 .|    |    |    exit()
+21D8 .|    |    |    -
+21D8 .|    |    -
+21D8 .|    -
+CE8A .START (2018-07-11 15:46:04) phpCAS-1.3.5 ****************** [CAS.php:468]
+CE8A .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+CE8A .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+CE8A .|    |    Starting a new session ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c [Client.php:932]
+CE8A .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+CE8A .|    <= ''
+CE8A .<= ''
+CE8A .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+CE8A .<= ''
+CE8A .=> phpCAS::setNoCasServerValidation() [login.php:12]
+CE8A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+CE8A .<= ''
+CE8A .=> phpCAS::forceAuthentication() [login.php:14]
+CE8A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+CE8A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+CE8A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+CE8A .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+CE8A .|    |    |    <= true
+CE8A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+CE8A .|    |    <= true
+CE8A .|    |    no need to authenticate [Client.php:1282]
+CE8A .|    <= true
+CE8A .<= ''
+CE8A .=> phpCAS::checkAuthentication() [login.php:16]
+CE8A .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+CE8A .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+CE8A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+CE8A .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+CE8A .|    |    |    <= true
+CE8A .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+CE8A .|    |    <= true
+CE8A .|    |    user is authenticated [Client.php:1332]
+CE8A .|    <= true
+CE8A .<= true
+982F .START (2018-07-11 19:00:03) phpCAS-1.3.5 ****************** [CAS.php:468]
+982F .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+982F .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+982F .|    |    Starting a new session ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c [Client.php:932]
+982F .|    |    Session is not authenticated [Client.php:938]
+982F .|    <= ''
+982F .<= ''
+982F .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+982F .<= ''
+982F .=> phpCAS::setNoCasServerValidation() [login.php:12]
+982F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+982F .<= ''
+982F .=> phpCAS::forceAuthentication() [login.php:14]
+982F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+982F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+982F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+982F .|    |    |    |    no user found [Client.php:1635]
+982F .|    |    |    <= false
+982F .|    |    |    no ticket found [Client.php:1494]
+982F .|    |    <= false
+982F .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+982F .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+982F .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+982F .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+982F .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+982F .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+982F .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+982F .|    |    |    exit()
+982F .|    |    |    -
+982F .|    |    -
+982F .|    -
+2465 .START (2018-07-11 19:00:17) phpCAS-1.3.5 ****************** [CAS.php:468]
+2465 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+2465 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+2465 .|    |    Starting a new session ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c [Client.php:932]
+2465 .|    |    Session is not authenticated [Client.php:938]
+2465 .|    |    Ticket 'ST-50915-LwNbbI4GGUe4azVT2JAn-cas01c' found [Client.php:1020]
+2465 .|    <= ''
+2465 .<= ''
+2465 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+2465 .<= ''
+2465 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+2465 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+2465 .<= ''
+2465 .=> phpCAS::forceAuthentication() [login.php:14]
+2465 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2465 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2465 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2465 .|    |    |    |    no user found [Client.php:1635]
+2465 .|    |    |    <= false
+2465 .|    |    |    CAS 2.0 ticket `ST-50915-LwNbbI4GGUe4azVT2JAn-cas01c' is present [Client.php:1446]
+2465 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+2465 .|    |    |    |     [Client.php:3169]
+2465 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+2465 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+2465 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+2465 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+2465 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+2465 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-50915-LwNbbI4GGUe4azVT2JAn-cas01c', NULL, NULL, NULL) [Client.php:3191]
+2465 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+2465 .|    |    |    |    |    |    Response Body: 
+2465 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+2465 .|    |    |    |    |    |        <cas:authenticationSuccess>
+2465 .|    |    |    |    |    |            <cas:user>ayachem</cas:user>
+2465 .|    |    |    |    |    |            </cas:authenticationSuccess>
+2465 .|    |    |    |    |    |    </cas:serviceResponse>
+2465 .|    |    |    |    |    |    
+2465 .|    |    |    |    |    |     [CurlRequest.php:84]
+2465 .|    |    |    |    |    <= true
+2465 .|    |    |    |    <= true
+2465 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+2465 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+2465 .|    |    |    |    <= ''
+2465 .|    |    |    |    Storing Proxy List [Client.php:3270]
+2465 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+2465 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+2465 .|    |    |    |    <= true
+2465 .|    |    |    |    => CAS_Client::_renameSession('ST-50915-LwNbbI4GGUe4azVT2JAn-cas01c') [Client.php:3293]
+2465 .|    |    |    |    |    Killing session: ST-50224-HAVb4XPIavZ6ieW1ruld-cas01c [Client.php:3682]
+2465 .|    |    |    |    |    Starting session: ST-50915-LwNbbI4GGUe4azVT2JAn-cas01c [Client.php:3686]
+2465 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+2465 .|    |    |    |    <= ''
+2465 .|    |    |    <= true
+2465 .|    |    |    CAS 2.0 ticket `ST-50915-LwNbbI4GGUe4azVT2JAn-cas01c' was validated [Client.php:1452]
+2465 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+2465 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+2465 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+2465 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+2465 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+2465 .|    |    |    exit()
+2465 .|    |    |    -
+2465 .|    |    -
+2465 .|    -
+4673 .START (2018-07-11 19:00:18) phpCAS-1.3.5 ****************** [CAS.php:468]
+4673 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+4673 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+4673 .|    |    Starting a new session ST-50915-LwNbbI4GGUe4azVT2JAn-cas01c [Client.php:932]
+4673 .|    |    Session is authenticated as: ayachem [Client.php:936]
+4673 .|    <= ''
+4673 .<= ''
+4673 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+4673 .<= ''
+4673 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+4673 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+4673 .<= ''
+4673 .=> phpCAS::forceAuthentication() [login.php:14]
+4673 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4673 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4673 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4673 .|    |    |    |    user = `ayachem' [Client.php:1622]
+4673 .|    |    |    <= true
+4673 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+4673 .|    |    <= true
+4673 .|    |    no need to authenticate [Client.php:1282]
+4673 .|    <= true
+4673 .<= ''
+4673 .=> phpCAS::checkAuthentication() [login.php:16]
+4673 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+4673 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+4673 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4673 .|    |    |    |    user = `ayachem' [Client.php:1622]
+4673 .|    |    |    <= true
+4673 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+4673 .|    |    <= true
+4673 .|    |    user is authenticated [Client.php:1332]
+4673 .|    <= true
+4673 .<= true
+FA2A .START (2018-07-12 07:06:07) phpCAS-1.3.5 ****************** [CAS.php:468]
+FA2A .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+FA2A .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+FA2A .|    |    Starting a new session h50fio31hlbvofst7snk2jtq75 [Client.php:932]
+FA2A .|    |    Session is not authenticated [Client.php:938]
+FA2A .|    <= ''
+FA2A .<= ''
+FA2A .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+FA2A .<= ''
+FA2A .=> phpCAS::setNoCasServerValidation() [login.php:12]
+FA2A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+FA2A .<= ''
+FA2A .=> phpCAS::forceAuthentication() [login.php:14]
+FA2A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+FA2A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+FA2A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+FA2A .|    |    |    |    no user found [Client.php:1635]
+FA2A .|    |    |    <= false
+FA2A .|    |    |    no ticket found [Client.php:1494]
+FA2A .|    |    <= false
+FA2A .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+FA2A .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+FA2A .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+FA2A .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+FA2A .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+FA2A .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+FA2A .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+FA2A .|    |    |    exit()
+FA2A .|    |    |    -
+FA2A .|    |    -
+FA2A .|    -
+3862 .START (2018-07-12 07:06:18) phpCAS-1.3.5 ****************** [CAS.php:468]
+3862 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+3862 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+3862 .|    |    Starting a new session h50fio31hlbvofst7snk2jtq75 [Client.php:932]
+3862 .|    |    Session is not authenticated [Client.php:938]
+3862 .|    |    Ticket 'ST-52002-KBibzLrebQbmAgSHzWQP-cas01c' found [Client.php:1020]
+3862 .|    <= ''
+3862 .<= ''
+3862 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+3862 .<= ''
+3862 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+3862 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3862 .<= ''
+3862 .=> phpCAS::forceAuthentication() [login.php:14]
+3862 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3862 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3862 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3862 .|    |    |    |    no user found [Client.php:1635]
+3862 .|    |    |    <= false
+3862 .|    |    |    CAS 2.0 ticket `ST-52002-KBibzLrebQbmAgSHzWQP-cas01c' is present [Client.php:1446]
+3862 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+3862 .|    |    |    |     [Client.php:3169]
+3862 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+3862 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+3862 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+3862 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3862 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+3862 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52002-KBibzLrebQbmAgSHzWQP-cas01c', NULL, NULL, NULL) [Client.php:3191]
+3862 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+3862 .|    |    |    |    |    |    Response Body: 
+3862 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3862 .|    |    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+3862 .|    |    |    |    |    |    </cas:serviceResponse>
+3862 .|    |    |    |    |    |    
+3862 .|    |    |    |    |    |     [CurlRequest.php:84]
+3862 .|    |    |    |    |    <= true
+3862 .|    |    |    |    <= true
+3862 .|    |    |    |    => CAS_AuthenticationException::__construct(CAS_Client, 'Ticket not validated', 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52002-KBibzLrebQbmAgSHzWQP-cas01c', false, false, '<cas:serviceResponse xmlns:cas=\'http://www.yale.edu/tp/cas\'>    <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure></cas:serviceResponse>', 'UNAUTHORIZED_SERVICE', 'UNAUTHORIZED_SERVICE') [Client.php:3241]
+3862 .|    |    |    |    |    => CAS_Client::getURL() [AuthenticationException.php:77]
+3862 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3862 .|    |    |    |    |    CAS URL: https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52002-KBibzLrebQbmAgSHzWQP-cas01c [AuthenticationException.php:80]
+3862 .|    |    |    |    |    Authentication failure: Ticket not validated [AuthenticationException.php:81]
+3862 .|    |    |    |    |    Reason: [UNAUTHORIZED_SERVICE] CAS error: UNAUTHORIZED_SERVICE [AuthenticationException.php:97]
+3862 .|    |    |    |    |    CAS response: <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3862 .|    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+3862 .|    |    |    |    |    </cas:serviceResponse>
+3862 .|    |    |    |    |     [AuthenticationException.php:102]
+3862 .|    |    |    |    |    exit()
+3862 .|    |    |    |    |    -
+3862 .|    |    |    |    -
+3862 .|    |    |    -
+3862 .|    |    -
+3862 .|    -
+CC91 .START (2018-07-12 07:06:23) phpCAS-1.3.5 ****************** [CAS.php:468]
+CC91 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+CC91 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+CC91 .|    |    Starting a new session h50fio31hlbvofst7snk2jtq75 [Client.php:932]
+CC91 .|    |    Session is not authenticated [Client.php:938]
+CC91 .|    <= ''
+CC91 .<= ''
+CC91 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+CC91 .<= ''
+CC91 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+CC91 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+CC91 .<= ''
+CC91 .=> phpCAS::forceAuthentication() [login.php:14]
+CC91 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+CC91 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+CC91 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+CC91 .|    |    |    |    no user found [Client.php:1635]
+CC91 .|    |    |    <= false
+CC91 .|    |    |    no ticket found [Client.php:1494]
+CC91 .|    |    <= false
+CC91 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+CC91 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+CC91 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+CC91 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+CC91 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+CC91 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+CC91 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+CC91 .|    |    |    exit()
+CC91 .|    |    |    -
+CC91 .|    |    -
+CC91 .|    -
+77FD .START (2018-07-12 07:06:26) phpCAS-1.3.5 ****************** [CAS.php:468]
+77FD .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+77FD .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+77FD .|    |    Starting a new session h50fio31hlbvofst7snk2jtq75 [Client.php:932]
+77FD .|    |    Session is not authenticated [Client.php:938]
+77FD .|    |    Ticket 'ST-52007-QZM3nJZTxQbHZXnYz527-cas01c' found [Client.php:1020]
+77FD .|    <= ''
+77FD .<= ''
+77FD .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+77FD .<= ''
+77FD .=> phpCAS::setNoCasServerValidation() [login.php:12]
+77FD .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+77FD .<= ''
+77FD .=> phpCAS::forceAuthentication() [login.php:14]
+77FD .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+77FD .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+77FD .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+77FD .|    |    |    |    no user found [Client.php:1635]
+77FD .|    |    |    <= false
+77FD .|    |    |    CAS 2.0 ticket `ST-52007-QZM3nJZTxQbHZXnYz527-cas01c' is present [Client.php:1446]
+77FD .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+77FD .|    |    |    |     [Client.php:3169]
+77FD .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+77FD .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+77FD .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+77FD .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+77FD .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+77FD .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52007-QZM3nJZTxQbHZXnYz527-cas01c', NULL, NULL, NULL) [Client.php:3191]
+77FD .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+77FD .|    |    |    |    |    |    Response Body: 
+77FD .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+77FD .|    |    |    |    |    |        <cas:authenticationSuccess>
+77FD .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+77FD .|    |    |    |    |    |            </cas:authenticationSuccess>
+77FD .|    |    |    |    |    |    </cas:serviceResponse>
+77FD .|    |    |    |    |    |    
+77FD .|    |    |    |    |    |     [CurlRequest.php:84]
+77FD .|    |    |    |    |    <= true
+77FD .|    |    |    |    <= true
+77FD .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+77FD .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+77FD .|    |    |    |    <= ''
+77FD .|    |    |    |    Storing Proxy List [Client.php:3270]
+77FD .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+77FD .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+77FD .|    |    |    |    <= true
+77FD .|    |    |    |    => CAS_Client::_renameSession('ST-52007-QZM3nJZTxQbHZXnYz527-cas01c') [Client.php:3293]
+77FD .|    |    |    |    |    Killing session: h50fio31hlbvofst7snk2jtq75 [Client.php:3682]
+77FD .|    |    |    |    |    Starting session: ST-52007-QZM3nJZTxQbHZXnYz527-cas01c [Client.php:3686]
+77FD .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+77FD .|    |    |    |    <= ''
+77FD .|    |    |    <= true
+77FD .|    |    |    CAS 2.0 ticket `ST-52007-QZM3nJZTxQbHZXnYz527-cas01c' was validated [Client.php:1452]
+77FD .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+77FD .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+77FD .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+77FD .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+77FD .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+77FD .|    |    |    exit()
+77FD .|    |    |    -
+77FD .|    |    -
+77FD .|    -
+1A32 .START (2018-07-12 07:06:26) phpCAS-1.3.5 ****************** [CAS.php:468]
+1A32 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+1A32 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+1A32 .|    |    Starting a new session ST-52007-QZM3nJZTxQbHZXnYz527-cas01c [Client.php:932]
+1A32 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+1A32 .|    <= ''
+1A32 .<= ''
+1A32 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+1A32 .<= ''
+1A32 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+1A32 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+1A32 .<= ''
+1A32 .=> phpCAS::forceAuthentication() [login.php:14]
+1A32 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+1A32 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+1A32 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+1A32 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+1A32 .|    |    |    <= true
+1A32 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+1A32 .|    |    <= true
+1A32 .|    |    no need to authenticate [Client.php:1282]
+1A32 .|    <= true
+1A32 .<= ''
+1A32 .=> phpCAS::checkAuthentication() [login.php:16]
+1A32 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+1A32 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+1A32 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+1A32 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+1A32 .|    |    |    <= true
+1A32 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+1A32 .|    |    <= true
+1A32 .|    |    user is authenticated [Client.php:1332]
+1A32 .|    <= true
+1A32 .<= true
+524D .START (2018-07-12 07:17:24) phpCAS-1.3.5 ****************** [CAS.php:468]
+524D .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+524D .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+524D .|    |    Starting a new session kifv2oijtvk70qk62qq1tisda4 [Client.php:932]
+524D .|    |    Session is not authenticated [Client.php:938]
+524D .|    <= ''
+524D .<= ''
+524D .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+524D .<= ''
+524D .=> phpCAS::setNoCasServerValidation() [login.php:12]
+524D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+524D .<= ''
+524D .=> phpCAS::forceAuthentication() [login.php:14]
+524D .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+524D .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+524D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+524D .|    |    |    |    no user found [Client.php:1635]
+524D .|    |    |    <= false
+524D .|    |    |    no ticket found [Client.php:1494]
+524D .|    |    <= false
+524D .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+524D .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+524D .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+524D .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+524D .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+524D .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+524D .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+524D .|    |    |    exit()
+524D .|    |    |    -
+524D .|    |    -
+524D .|    -
+1DF9 .START (2018-07-12 07:17:42) phpCAS-1.3.5 ****************** [CAS.php:468]
+1DF9 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+1DF9 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+1DF9 .|    |    Starting a new session kifv2oijtvk70qk62qq1tisda4 [Client.php:932]
+1DF9 .|    |    Session is not authenticated [Client.php:938]
+1DF9 .|    |    Ticket 'ST-52125-X1cg1u6GedtYEJzbidPQ-cas01c' found [Client.php:1020]
+1DF9 .|    <= ''
+1DF9 .<= ''
+1DF9 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+1DF9 .<= ''
+1DF9 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+1DF9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+1DF9 .<= ''
+1DF9 .=> phpCAS::forceAuthentication() [login.php:14]
+1DF9 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+1DF9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+1DF9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+1DF9 .|    |    |    |    no user found [Client.php:1635]
+1DF9 .|    |    |    <= false
+1DF9 .|    |    |    CAS 2.0 ticket `ST-52125-X1cg1u6GedtYEJzbidPQ-cas01c' is present [Client.php:1446]
+1DF9 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+1DF9 .|    |    |    |     [Client.php:3169]
+1DF9 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+1DF9 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+1DF9 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+1DF9 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+1DF9 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+1DF9 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52125-X1cg1u6GedtYEJzbidPQ-cas01c', NULL, NULL, NULL) [Client.php:3191]
+1DF9 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+1DF9 .|    |    |    |    |    |    Response Body: 
+1DF9 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+1DF9 .|    |    |    |    |    |        <cas:authenticationSuccess>
+1DF9 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+1DF9 .|    |    |    |    |    |            </cas:authenticationSuccess>
+1DF9 .|    |    |    |    |    |    </cas:serviceResponse>
+1DF9 .|    |    |    |    |    |    
+1DF9 .|    |    |    |    |    |     [CurlRequest.php:84]
+1DF9 .|    |    |    |    |    <= true
+1DF9 .|    |    |    |    <= true
+1DF9 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+1DF9 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+1DF9 .|    |    |    |    <= ''
+1DF9 .|    |    |    |    Storing Proxy List [Client.php:3270]
+1DF9 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+1DF9 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+1DF9 .|    |    |    |    <= true
+1DF9 .|    |    |    |    => CAS_Client::_renameSession('ST-52125-X1cg1u6GedtYEJzbidPQ-cas01c') [Client.php:3293]
+1DF9 .|    |    |    |    |    Killing session: kifv2oijtvk70qk62qq1tisda4 [Client.php:3682]
+1DF9 .|    |    |    |    |    Starting session: ST-52125-X1cg1u6GedtYEJzbidPQ-cas01c [Client.php:3686]
+1DF9 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+1DF9 .|    |    |    |    <= ''
+1DF9 .|    |    |    <= true
+1DF9 .|    |    |    CAS 2.0 ticket `ST-52125-X1cg1u6GedtYEJzbidPQ-cas01c' was validated [Client.php:1452]
+1DF9 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+1DF9 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+1DF9 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+1DF9 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+1DF9 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+1DF9 .|    |    |    exit()
+1DF9 .|    |    |    -
+1DF9 .|    |    -
+1DF9 .|    -
+F2EB .START (2018-07-12 07:17:43) phpCAS-1.3.5 ****************** [CAS.php:468]
+F2EB .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+F2EB .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+F2EB .|    |    Starting a new session ST-52125-X1cg1u6GedtYEJzbidPQ-cas01c [Client.php:932]
+F2EB .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+F2EB .|    <= ''
+F2EB .<= ''
+F2EB .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+F2EB .<= ''
+F2EB .=> phpCAS::setNoCasServerValidation() [login.php:12]
+F2EB .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+F2EB .<= ''
+F2EB .=> phpCAS::forceAuthentication() [login.php:14]
+F2EB .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+F2EB .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+F2EB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+F2EB .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+F2EB .|    |    |    <= true
+F2EB .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+F2EB .|    |    <= true
+F2EB .|    |    no need to authenticate [Client.php:1282]
+F2EB .|    <= true
+F2EB .<= ''
+F2EB .=> phpCAS::checkAuthentication() [login.php:16]
+F2EB .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+F2EB .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+F2EB .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+F2EB .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+F2EB .|    |    |    <= true
+F2EB .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+F2EB .|    |    <= true
+F2EB .|    |    user is authenticated [Client.php:1332]
+F2EB .|    <= true
+F2EB .<= true
+8DEA .START (2018-07-12 08:26:38) phpCAS-1.3.5 ****************** [CAS.php:468]
+8DEA .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+8DEA .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+8DEA .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+8DEA .|    |    Session is not authenticated [Client.php:938]
+8DEA .|    <= ''
+8DEA .<= ''
+8DEA .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+8DEA .<= ''
+8DEA .=> phpCAS::setNoCasServerValidation() [login.php:12]
+8DEA .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+8DEA .<= ''
+8DEA .=> phpCAS::forceAuthentication() [login.php:14]
+8DEA .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8DEA .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8DEA .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8DEA .|    |    |    |    no user found [Client.php:1635]
+8DEA .|    |    |    <= false
+8DEA .|    |    |    no ticket found [Client.php:1494]
+8DEA .|    |    <= false
+8DEA .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+8DEA .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+8DEA .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+8DEA .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+8DEA .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+8DEA .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+8DEA .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+8DEA .|    |    |    exit()
+8DEA .|    |    |    -
+8DEA .|    |    -
+8DEA .|    -
+DCE0 .START (2018-07-12 08:26:43) phpCAS-1.3.5 ****************** [CAS.php:468]
+DCE0 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+DCE0 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+DCE0 .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+DCE0 .|    |    Session is not authenticated [Client.php:938]
+DCE0 .|    |    Ticket 'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' found [Client.php:1020]
+DCE0 .|    <= ''
+DCE0 .<= ''
+DCE0 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+DCE0 .<= ''
+DCE0 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+DCE0 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+DCE0 .<= ''
+DCE0 .=> phpCAS::forceAuthentication() [login.php:14]
+DCE0 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+DCE0 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+DCE0 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+DCE0 .|    |    |    |    no user found [Client.php:1635]
+DCE0 .|    |    |    <= false
+DCE0 .|    |    |    CAS 2.0 ticket `ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' is present [Client.php:1446]
+DCE0 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+DCE0 .|    |    |    |     [Client.php:3169]
+DCE0 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+DCE0 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+DCE0 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+DCE0 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+DCE0 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+DCE0 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', NULL, NULL, NULL) [Client.php:3191]
+DCE0 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+DCE0 .|    |    |    |    |    |    Response Body: 
+DCE0 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+DCE0 .|    |    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+DCE0 .|    |    |    |    |    |    </cas:serviceResponse>
+DCE0 .|    |    |    |    |    |    
+DCE0 .|    |    |    |    |    |     [CurlRequest.php:84]
+DCE0 .|    |    |    |    |    <= true
+DCE0 .|    |    |    |    <= true
+DCE0 .|    |    |    |    => CAS_AuthenticationException::__construct(CAS_Client, 'Ticket not validated', 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', false, false, '<cas:serviceResponse xmlns:cas=\'http://www.yale.edu/tp/cas\'>    <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure></cas:serviceResponse>', 'UNAUTHORIZED_SERVICE', 'UNAUTHORIZED_SERVICE') [Client.php:3241]
+DCE0 .|    |    |    |    |    => CAS_Client::getURL() [AuthenticationException.php:77]
+DCE0 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+DCE0 .|    |    |    |    |    CAS URL: https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c [AuthenticationException.php:80]
+DCE0 .|    |    |    |    |    Authentication failure: Ticket not validated [AuthenticationException.php:81]
+DCE0 .|    |    |    |    |    Reason: [UNAUTHORIZED_SERVICE] CAS error: UNAUTHORIZED_SERVICE [AuthenticationException.php:97]
+DCE0 .|    |    |    |    |    CAS response: <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+DCE0 .|    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+DCE0 .|    |    |    |    |    </cas:serviceResponse>
+DCE0 .|    |    |    |    |     [AuthenticationException.php:102]
+DCE0 .|    |    |    |    |    exit()
+DCE0 .|    |    |    |    |    -
+DCE0 .|    |    |    |    -
+DCE0 .|    |    |    -
+DCE0 .|    |    -
+DCE0 .|    -
+3CAE .START (2018-07-12 08:26:44) phpCAS-1.3.5 ****************** [CAS.php:468]
+3CAE .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+3CAE .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+3CAE .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+3CAE .|    |    Session is not authenticated [Client.php:938]
+3CAE .|    |    Ticket 'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' found [Client.php:1020]
+3CAE .|    <= ''
+3CAE .<= ''
+3CAE .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+3CAE .<= ''
+3CAE .=> phpCAS::setNoCasServerValidation() [login.php:12]
+3CAE .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3CAE .<= ''
+3CAE .=> phpCAS::forceAuthentication() [login.php:14]
+3CAE .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3CAE .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3CAE .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3CAE .|    |    |    |    no user found [Client.php:1635]
+3CAE .|    |    |    <= false
+3CAE .|    |    |    CAS 2.0 ticket `ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' is present [Client.php:1446]
+3CAE .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+3CAE .|    |    |    |     [Client.php:3169]
+3CAE .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+3CAE .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+3CAE .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+3CAE .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3CAE .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+3CAE .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', NULL, NULL, NULL) [Client.php:3191]
+3CAE .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+3CAE .|    |    |    |    |    |    Response Body: 
+3CAE .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3CAE .|    |    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+3CAE .|    |    |    |    |    |    </cas:serviceResponse>
+3CAE .|    |    |    |    |    |    
+3CAE .|    |    |    |    |    |     [CurlRequest.php:84]
+3CAE .|    |    |    |    |    <= true
+3CAE .|    |    |    |    <= true
+3CAE .|    |    |    |    => CAS_AuthenticationException::__construct(CAS_Client, 'Ticket not validated', 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', false, false, '<cas:serviceResponse xmlns:cas=\'http://www.yale.edu/tp/cas\'>    <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure></cas:serviceResponse>', 'UNAUTHORIZED_SERVICE', 'UNAUTHORIZED_SERVICE') [Client.php:3241]
+3CAE .|    |    |    |    |    => CAS_Client::getURL() [AuthenticationException.php:77]
+3CAE .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3CAE .|    |    |    |    |    CAS URL: https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c [AuthenticationException.php:80]
+3CAE .|    |    |    |    |    Authentication failure: Ticket not validated [AuthenticationException.php:81]
+3CAE .|    |    |    |    |    Reason: [UNAUTHORIZED_SERVICE] CAS error: UNAUTHORIZED_SERVICE [AuthenticationException.php:97]
+3CAE .|    |    |    |    |    CAS response: <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3CAE .|    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+3CAE .|    |    |    |    |    </cas:serviceResponse>
+3CAE .|    |    |    |    |     [AuthenticationException.php:102]
+3CAE .|    |    |    |    |    exit()
+3CAE .|    |    |    |    |    -
+3CAE .|    |    |    |    -
+3CAE .|    |    |    -
+3CAE .|    |    -
+3CAE .|    -
+4185 .START (2018-07-12 08:26:45) phpCAS-1.3.5 ****************** [CAS.php:468]
+4185 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+4185 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+4185 .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+4185 .|    |    Session is not authenticated [Client.php:938]
+4185 .|    |    Ticket 'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' found [Client.php:1020]
+4185 .|    <= ''
+4185 .<= ''
+4185 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+4185 .<= ''
+4185 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+4185 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+4185 .<= ''
+4185 .=> phpCAS::forceAuthentication() [login.php:14]
+4185 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+4185 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+4185 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+4185 .|    |    |    |    no user found [Client.php:1635]
+4185 .|    |    |    <= false
+4185 .|    |    |    CAS 2.0 ticket `ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' is present [Client.php:1446]
+4185 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+4185 .|    |    |    |     [Client.php:3169]
+4185 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+4185 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+4185 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+4185 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+4185 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+4185 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', NULL, NULL, NULL) [Client.php:3191]
+4185 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+4185 .|    |    |    |    |    |    Response Body: 
+4185 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+4185 .|    |    |    |    |    |        <cas:authenticationFailure code="INVALID_TICKET">Ticket &#39;ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c&#39; not recognized</cas:authenticationFailure>
+4185 .|    |    |    |    |    |    </cas:serviceResponse>
+4185 .|    |    |    |    |    |    
+4185 .|    |    |    |    |    |     [CurlRequest.php:84]
+4185 .|    |    |    |    |    <= true
+4185 .|    |    |    |    <= true
+4185 .|    |    |    |    => CAS_AuthenticationException::__construct(CAS_Client, 'Ticket not validated', 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', false, false, '<cas:serviceResponse xmlns:cas=\'http://www.yale.edu/tp/cas\'>    <cas:authenticationFailure code="INVALID_TICKET">Ticket &#39;ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c&#39; not recognized</cas:authenticationFailure></cas:serviceResponse>', 'INVALID_TICKET', 'Ticket \'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c\' not recognized') [Client.php:3241]
+4185 .|    |    |    |    |    => CAS_Client::getURL() [AuthenticationException.php:77]
+4185 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+4185 .|    |    |    |    |    CAS URL: https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c [AuthenticationException.php:80]
+4185 .|    |    |    |    |    Authentication failure: Ticket not validated [AuthenticationException.php:81]
+4185 .|    |    |    |    |    Reason: [INVALID_TICKET] CAS error: Ticket 'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' not recognized [AuthenticationException.php:97]
+4185 .|    |    |    |    |    CAS response: <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+4185 .|    |    |    |    |        <cas:authenticationFailure code="INVALID_TICKET">Ticket &#39;ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c&#39; not recognized</cas:authenticationFailure>
+4185 .|    |    |    |    |    </cas:serviceResponse>
+4185 .|    |    |    |    |     [AuthenticationException.php:102]
+4185 .|    |    |    |    |    exit()
+4185 .|    |    |    |    |    -
+4185 .|    |    |    |    -
+4185 .|    |    |    -
+4185 .|    |    -
+4185 .|    -
+2F50 .START (2018-07-12 08:26:46) phpCAS-1.3.5 ****************** [CAS.php:468]
+2F50 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+2F50 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+2F50 .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+2F50 .|    |    Session is not authenticated [Client.php:938]
+2F50 .|    |    Ticket 'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' found [Client.php:1020]
+2F50 .|    <= ''
+2F50 .<= ''
+2F50 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+2F50 .<= ''
+2F50 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+2F50 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+2F50 .<= ''
+2F50 .=> phpCAS::forceAuthentication() [login.php:14]
+2F50 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+2F50 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+2F50 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+2F50 .|    |    |    |    no user found [Client.php:1635]
+2F50 .|    |    |    <= false
+2F50 .|    |    |    CAS 2.0 ticket `ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' is present [Client.php:1446]
+2F50 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+2F50 .|    |    |    |     [Client.php:3169]
+2F50 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+2F50 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+2F50 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+2F50 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+2F50 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+2F50 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', NULL, NULL, NULL) [Client.php:3191]
+2F50 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+2F50 .|    |    |    |    |    |    Response Body: 
+2F50 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+2F50 .|    |    |    |    |    |        <cas:authenticationFailure code="INVALID_TICKET">Ticket &#39;ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c&#39; not recognized</cas:authenticationFailure>
+2F50 .|    |    |    |    |    |    </cas:serviceResponse>
+2F50 .|    |    |    |    |    |    
+2F50 .|    |    |    |    |    |     [CurlRequest.php:84]
+2F50 .|    |    |    |    |    <= true
+2F50 .|    |    |    |    <= true
+2F50 .|    |    |    |    => CAS_AuthenticationException::__construct(CAS_Client, 'Ticket not validated', 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c', false, false, '<cas:serviceResponse xmlns:cas=\'http://www.yale.edu/tp/cas\'>    <cas:authenticationFailure code="INVALID_TICKET">Ticket &#39;ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c&#39; not recognized</cas:authenticationFailure></cas:serviceResponse>', 'INVALID_TICKET', 'Ticket \'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c\' not recognized') [Client.php:3241]
+2F50 .|    |    |    |    |    => CAS_Client::getURL() [AuthenticationException.php:77]
+2F50 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+2F50 .|    |    |    |    |    CAS URL: https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c [AuthenticationException.php:80]
+2F50 .|    |    |    |    |    Authentication failure: Ticket not validated [AuthenticationException.php:81]
+2F50 .|    |    |    |    |    Reason: [INVALID_TICKET] CAS error: Ticket 'ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c' not recognized [AuthenticationException.php:97]
+2F50 .|    |    |    |    |    CAS response: <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+2F50 .|    |    |    |    |        <cas:authenticationFailure code="INVALID_TICKET">Ticket &#39;ST-52630-GcDdrhP2p4tOlSD145Sa-cas01c&#39; not recognized</cas:authenticationFailure>
+2F50 .|    |    |    |    |    </cas:serviceResponse>
+2F50 .|    |    |    |    |     [AuthenticationException.php:102]
+2F50 .|    |    |    |    |    exit()
+2F50 .|    |    |    |    |    -
+2F50 .|    |    |    |    -
+2F50 .|    |    |    -
+2F50 .|    |    -
+2F50 .|    -
+E03C .START (2018-07-12 08:26:52) phpCAS-1.3.5 ****************** [CAS.php:468]
+E03C .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+E03C .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+E03C .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+E03C .|    |    Session is not authenticated [Client.php:938]
+E03C .|    <= ''
+E03C .<= ''
+E03C .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+E03C .<= ''
+E03C .=> phpCAS::setNoCasServerValidation() [login.php:12]
+E03C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+E03C .<= ''
+E03C .=> phpCAS::forceAuthentication() [login.php:14]
+E03C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E03C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E03C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E03C .|    |    |    |    no user found [Client.php:1635]
+E03C .|    |    |    <= false
+E03C .|    |    |    no ticket found [Client.php:1494]
+E03C .|    |    <= false
+E03C .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+E03C .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+E03C .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+E03C .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+E03C .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+E03C .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+E03C .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+E03C .|    |    |    exit()
+E03C .|    |    |    -
+E03C .|    |    -
+E03C .|    -
+3E4A .START (2018-07-12 08:26:52) phpCAS-1.3.5 ****************** [CAS.php:468]
+3E4A .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+3E4A .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+3E4A .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+3E4A .|    |    Session is not authenticated [Client.php:938]
+3E4A .|    |    Ticket 'ST-52631-ajSK6Ye2HaGZYAoRmxLc-cas01c' found [Client.php:1020]
+3E4A .|    <= ''
+3E4A .<= ''
+3E4A .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+3E4A .<= ''
+3E4A .=> phpCAS::setNoCasServerValidation() [login.php:12]
+3E4A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+3E4A .<= ''
+3E4A .=> phpCAS::forceAuthentication() [login.php:14]
+3E4A .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+3E4A .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+3E4A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+3E4A .|    |    |    |    no user found [Client.php:1635]
+3E4A .|    |    |    <= false
+3E4A .|    |    |    CAS 2.0 ticket `ST-52631-ajSK6Ye2HaGZYAoRmxLc-cas01c' is present [Client.php:1446]
+3E4A .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+3E4A .|    |    |    |     [Client.php:3169]
+3E4A .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+3E4A .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+3E4A .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+3E4A .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3E4A .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+3E4A .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52631-ajSK6Ye2HaGZYAoRmxLc-cas01c', NULL, NULL, NULL) [Client.php:3191]
+3E4A .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+3E4A .|    |    |    |    |    |    Response Body: 
+3E4A .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3E4A .|    |    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+3E4A .|    |    |    |    |    |    </cas:serviceResponse>
+3E4A .|    |    |    |    |    |    
+3E4A .|    |    |    |    |    |     [CurlRequest.php:84]
+3E4A .|    |    |    |    |    <= true
+3E4A .|    |    |    |    <= true
+3E4A .|    |    |    |    => CAS_AuthenticationException::__construct(CAS_Client, 'Ticket not validated', 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52631-ajSK6Ye2HaGZYAoRmxLc-cas01c', false, false, '<cas:serviceResponse xmlns:cas=\'http://www.yale.edu/tp/cas\'>    <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure></cas:serviceResponse>', 'UNAUTHORIZED_SERVICE', 'UNAUTHORIZED_SERVICE') [Client.php:3241]
+3E4A .|    |    |    |    |    => CAS_Client::getURL() [AuthenticationException.php:77]
+3E4A .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+3E4A .|    |    |    |    |    CAS URL: https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52631-ajSK6Ye2HaGZYAoRmxLc-cas01c [AuthenticationException.php:80]
+3E4A .|    |    |    |    |    Authentication failure: Ticket not validated [AuthenticationException.php:81]
+3E4A .|    |    |    |    |    Reason: [UNAUTHORIZED_SERVICE] CAS error: UNAUTHORIZED_SERVICE [AuthenticationException.php:97]
+3E4A .|    |    |    |    |    CAS response: <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+3E4A .|    |    |    |    |        <cas:authenticationFailure code="UNAUTHORIZED_SERVICE">UNAUTHORIZED_SERVICE</cas:authenticationFailure>
+3E4A .|    |    |    |    |    </cas:serviceResponse>
+3E4A .|    |    |    |    |     [AuthenticationException.php:102]
+3E4A .|    |    |    |    |    exit()
+3E4A .|    |    |    |    |    -
+3E4A .|    |    |    |    -
+3E4A .|    |    |    -
+3E4A .|    |    -
+3E4A .|    -
+6A9C .START (2018-07-12 08:26:58) phpCAS-1.3.5 ****************** [CAS.php:468]
+6A9C .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+6A9C .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+6A9C .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+6A9C .|    |    Session is not authenticated [Client.php:938]
+6A9C .|    <= ''
+6A9C .<= ''
+6A9C .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+6A9C .<= ''
+6A9C .=> phpCAS::setNoCasServerValidation() [login.php:12]
+6A9C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+6A9C .<= ''
+6A9C .=> phpCAS::forceAuthentication() [login.php:14]
+6A9C .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+6A9C .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+6A9C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+6A9C .|    |    |    |    no user found [Client.php:1635]
+6A9C .|    |    |    <= false
+6A9C .|    |    |    no ticket found [Client.php:1494]
+6A9C .|    |    <= false
+6A9C .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+6A9C .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+6A9C .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+6A9C .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+6A9C .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+6A9C .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+6A9C .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+6A9C .|    |    |    exit()
+6A9C .|    |    |    -
+6A9C .|    |    -
+6A9C .|    -
+E9E5 .START (2018-07-12 08:26:58) phpCAS-1.3.5 ****************** [CAS.php:468]
+E9E5 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+E9E5 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+E9E5 .|    |    Starting a new session ek38neh6riof968u9kru4u68j5 [Client.php:932]
+E9E5 .|    |    Session is not authenticated [Client.php:938]
+E9E5 .|    |    Ticket 'ST-52632-MFXx7XjqKL5IUuFdwkVY-cas01c' found [Client.php:1020]
+E9E5 .|    <= ''
+E9E5 .<= ''
+E9E5 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+E9E5 .<= ''
+E9E5 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+E9E5 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+E9E5 .<= ''
+E9E5 .=> phpCAS::forceAuthentication() [login.php:14]
+E9E5 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+E9E5 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+E9E5 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+E9E5 .|    |    |    |    no user found [Client.php:1635]
+E9E5 .|    |    |    <= false
+E9E5 .|    |    |    CAS 2.0 ticket `ST-52632-MFXx7XjqKL5IUuFdwkVY-cas01c' is present [Client.php:1446]
+E9E5 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+E9E5 .|    |    |    |     [Client.php:3169]
+E9E5 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+E9E5 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+E9E5 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+E9E5 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+E9E5 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+E9E5 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-52632-MFXx7XjqKL5IUuFdwkVY-cas01c', NULL, NULL, NULL) [Client.php:3191]
+E9E5 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+E9E5 .|    |    |    |    |    |    Response Body: 
+E9E5 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+E9E5 .|    |    |    |    |    |        <cas:authenticationSuccess>
+E9E5 .|    |    |    |    |    |            <cas:user>spriet</cas:user>
+E9E5 .|    |    |    |    |    |            </cas:authenticationSuccess>
+E9E5 .|    |    |    |    |    |    </cas:serviceResponse>
+E9E5 .|    |    |    |    |    |    
+E9E5 .|    |    |    |    |    |     [CurlRequest.php:84]
+E9E5 .|    |    |    |    |    <= true
+E9E5 .|    |    |    |    <= true
+E9E5 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+E9E5 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+E9E5 .|    |    |    |    <= ''
+E9E5 .|    |    |    |    Storing Proxy List [Client.php:3270]
+E9E5 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+E9E5 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+E9E5 .|    |    |    |    <= true
+E9E5 .|    |    |    |    => CAS_Client::_renameSession('ST-52632-MFXx7XjqKL5IUuFdwkVY-cas01c') [Client.php:3293]
+E9E5 .|    |    |    |    |    Killing session: ek38neh6riof968u9kru4u68j5 [Client.php:3682]
+E9E5 .|    |    |    |    |    Starting session: ST-52632-MFXx7XjqKL5IUuFdwkVY-cas01c [Client.php:3686]
+E9E5 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+E9E5 .|    |    |    |    <= ''
+E9E5 .|    |    |    <= true
+E9E5 .|    |    |    CAS 2.0 ticket `ST-52632-MFXx7XjqKL5IUuFdwkVY-cas01c' was validated [Client.php:1452]
+E9E5 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+E9E5 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+E9E5 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+E9E5 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+E9E5 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+E9E5 .|    |    |    exit()
+E9E5 .|    |    |    -
+E9E5 .|    |    -
+E9E5 .|    -
+D2D2 .START (2018-07-12 08:26:58) phpCAS-1.3.5 ****************** [CAS.php:468]
+D2D2 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+D2D2 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+D2D2 .|    |    Starting a new session ST-52632-MFXx7XjqKL5IUuFdwkVY-cas01c [Client.php:932]
+D2D2 .|    |    Session is authenticated as: spriet [Client.php:936]
+D2D2 .|    <= ''
+D2D2 .<= ''
+D2D2 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+D2D2 .<= ''
+D2D2 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+D2D2 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D2D2 .<= ''
+D2D2 .=> phpCAS::forceAuthentication() [login.php:14]
+D2D2 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D2D2 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D2D2 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D2D2 .|    |    |    |    user = `spriet' [Client.php:1622]
+D2D2 .|    |    |    <= true
+D2D2 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+D2D2 .|    |    <= true
+D2D2 .|    |    no need to authenticate [Client.php:1282]
+D2D2 .|    <= true
+D2D2 .<= ''
+D2D2 .=> phpCAS::checkAuthentication() [login.php:16]
+D2D2 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+D2D2 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+D2D2 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D2D2 .|    |    |    |    user = `spriet' [Client.php:1622]
+D2D2 .|    |    |    <= true
+D2D2 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+D2D2 .|    |    <= true
+D2D2 .|    |    user is authenticated [Client.php:1332]
+D2D2 .|    <= true
+D2D2 .<= true
+95AE .START (2018-07-12 14:04:28) phpCAS-1.3.5 ****************** [CAS.php:468]
+95AE .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+95AE .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+95AE .|    |    Starting a new session ST-52007-QZM3nJZTxQbHZXnYz527-cas01c [Client.php:932]
+95AE .|    |    Session is not authenticated [Client.php:938]
+95AE .|    <= ''
+95AE .<= ''
+95AE .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+95AE .<= ''
+95AE .=> phpCAS::setNoCasServerValidation() [login.php:12]
+95AE .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+95AE .<= ''
+95AE .=> phpCAS::forceAuthentication() [login.php:14]
+95AE .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+95AE .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+95AE .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+95AE .|    |    |    |    no user found [Client.php:1635]
+95AE .|    |    |    <= false
+95AE .|    |    |    no ticket found [Client.php:1494]
+95AE .|    |    <= false
+95AE .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+95AE .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+95AE .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+95AE .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+95AE .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+95AE .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+95AE .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+95AE .|    |    |    exit()
+95AE .|    |    |    -
+95AE .|    |    -
+95AE .|    -
+EB2F .START (2018-07-12 14:04:51) phpCAS-1.3.5 ****************** [CAS.php:468]
+EB2F .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+EB2F .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+EB2F .|    |    Starting a new session ST-52007-QZM3nJZTxQbHZXnYz527-cas01c [Client.php:932]
+EB2F .|    |    Session is not authenticated [Client.php:938]
+EB2F .|    |    Ticket 'ST-857-g1VG7MycFfMcbFZ6DgdU-cas01c' found [Client.php:1020]
+EB2F .|    <= ''
+EB2F .<= ''
+EB2F .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+EB2F .<= ''
+EB2F .=> phpCAS::setNoCasServerValidation() [login.php:12]
+EB2F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+EB2F .<= ''
+EB2F .=> phpCAS::forceAuthentication() [login.php:14]
+EB2F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+EB2F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+EB2F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+EB2F .|    |    |    |    no user found [Client.php:1635]
+EB2F .|    |    |    <= false
+EB2F .|    |    |    CAS 2.0 ticket `ST-857-g1VG7MycFfMcbFZ6DgdU-cas01c' is present [Client.php:1446]
+EB2F .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+EB2F .|    |    |    |     [Client.php:3169]
+EB2F .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+EB2F .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+EB2F .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+EB2F .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+EB2F .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+EB2F .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-857-g1VG7MycFfMcbFZ6DgdU-cas01c', NULL, NULL, NULL) [Client.php:3191]
+EB2F .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+EB2F .|    |    |    |    |    |    Response Body: 
+EB2F .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+EB2F .|    |    |    |    |    |        <cas:authenticationSuccess>
+EB2F .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+EB2F .|    |    |    |    |    |            </cas:authenticationSuccess>
+EB2F .|    |    |    |    |    |    </cas:serviceResponse>
+EB2F .|    |    |    |    |    |    
+EB2F .|    |    |    |    |    |     [CurlRequest.php:84]
+EB2F .|    |    |    |    |    <= true
+EB2F .|    |    |    |    <= true
+EB2F .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+EB2F .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+EB2F .|    |    |    |    <= ''
+EB2F .|    |    |    |    Storing Proxy List [Client.php:3270]
+EB2F .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+EB2F .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+EB2F .|    |    |    |    <= true
+EB2F .|    |    |    |    => CAS_Client::_renameSession('ST-857-g1VG7MycFfMcbFZ6DgdU-cas01c') [Client.php:3293]
+EB2F .|    |    |    |    |    Killing session: ST-52007-QZM3nJZTxQbHZXnYz527-cas01c [Client.php:3682]
+EB2F .|    |    |    |    |    Starting session: ST-857-g1VG7MycFfMcbFZ6DgdU-cas01c [Client.php:3686]
+EB2F .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+EB2F .|    |    |    |    <= ''
+EB2F .|    |    |    <= true
+EB2F .|    |    |    CAS 2.0 ticket `ST-857-g1VG7MycFfMcbFZ6DgdU-cas01c' was validated [Client.php:1452]
+EB2F .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+EB2F .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+EB2F .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+EB2F .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+EB2F .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+EB2F .|    |    |    exit()
+EB2F .|    |    |    -
+EB2F .|    |    -
+EB2F .|    -
+7444 .START (2018-07-12 14:04:51) phpCAS-1.3.5 ****************** [CAS.php:468]
+7444 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+7444 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+7444 .|    |    Starting a new session ST-857-g1VG7MycFfMcbFZ6DgdU-cas01c [Client.php:932]
+7444 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+7444 .|    <= ''
+7444 .<= ''
+7444 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+7444 .<= ''
+7444 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+7444 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+7444 .<= ''
+7444 .=> phpCAS::forceAuthentication() [login.php:14]
+7444 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+7444 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+7444 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7444 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+7444 .|    |    |    <= true
+7444 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+7444 .|    |    <= true
+7444 .|    |    no need to authenticate [Client.php:1282]
+7444 .|    <= true
+7444 .<= ''
+7444 .=> phpCAS::checkAuthentication() [login.php:16]
+7444 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+7444 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+7444 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+7444 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+7444 .|    |    |    <= true
+7444 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+7444 .|    |    <= true
+7444 .|    |    user is authenticated [Client.php:1332]
+7444 .|    <= true
+7444 .<= true
+C751 .START (2018-07-13 08:39:17) phpCAS-1.3.5 ****************** [CAS.php:468]
+C751 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+C751 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+C751 .|    |    Starting a new session ag1338a1rpunvh05j6ho98atb0 [Client.php:932]
+C751 .|    |    Session is not authenticated [Client.php:938]
+C751 .|    <= ''
+C751 .<= ''
+C751 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+C751 .<= ''
+C751 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+C751 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+C751 .<= ''
+C751 .=> phpCAS::forceAuthentication() [login.php:14]
+C751 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+C751 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+C751 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C751 .|    |    |    |    no user found [Client.php:1635]
+C751 .|    |    |    <= false
+C751 .|    |    |    no ticket found [Client.php:1494]
+C751 .|    |    <= false
+C751 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+C751 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+C751 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+C751 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+C751 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+C751 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+C751 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+C751 .|    |    |    exit()
+C751 .|    |    |    -
+C751 .|    |    -
+C751 .|    -
+343F .START (2018-07-13 08:39:19) phpCAS-1.3.5 ****************** [CAS.php:468]
+343F .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+343F .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+343F .|    |    Starting a new session ag1338a1rpunvh05j6ho98atb0 [Client.php:932]
+343F .|    |    Session is not authenticated [Client.php:938]
+343F .|    |    Ticket 'ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c' found [Client.php:1020]
+343F .|    <= ''
+343F .<= ''
+343F .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+343F .<= ''
+343F .=> phpCAS::setNoCasServerValidation() [login.php:12]
+343F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+343F .<= ''
+343F .=> phpCAS::forceAuthentication() [login.php:14]
+343F .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+343F .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+343F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+343F .|    |    |    |    no user found [Client.php:1635]
+343F .|    |    |    <= false
+343F .|    |    |    CAS 2.0 ticket `ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c' is present [Client.php:1446]
+343F .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+343F .|    |    |    |     [Client.php:3169]
+343F .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+343F .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+343F .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+343F .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+343F .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+343F .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c', NULL, NULL, NULL) [Client.php:3191]
+343F .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+343F .|    |    |    |    |    |    Response Body: 
+343F .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+343F .|    |    |    |    |    |        <cas:authenticationSuccess>
+343F .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+343F .|    |    |    |    |    |            </cas:authenticationSuccess>
+343F .|    |    |    |    |    |    </cas:serviceResponse>
+343F .|    |    |    |    |    |    
+343F .|    |    |    |    |    |     [CurlRequest.php:84]
+343F .|    |    |    |    |    <= true
+343F .|    |    |    |    <= true
+343F .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+343F .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+343F .|    |    |    |    <= ''
+343F .|    |    |    |    Storing Proxy List [Client.php:3270]
+343F .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+343F .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+343F .|    |    |    |    <= true
+343F .|    |    |    |    => CAS_Client::_renameSession('ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c') [Client.php:3293]
+343F .|    |    |    |    |    Killing session: ag1338a1rpunvh05j6ho98atb0 [Client.php:3682]
+343F .|    |    |    |    |    Starting session: ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c [Client.php:3686]
+343F .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+343F .|    |    |    |    <= ''
+343F .|    |    |    <= true
+343F .|    |    |    CAS 2.0 ticket `ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c' was validated [Client.php:1452]
+343F .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+343F .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+343F .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+343F .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+343F .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+343F .|    |    |    exit()
+343F .|    |    |    -
+343F .|    |    -
+343F .|    -
+11B7 .START (2018-07-13 08:39:20) phpCAS-1.3.5 ****************** [CAS.php:468]
+11B7 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+11B7 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+11B7 .|    |    Starting a new session ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c [Client.php:932]
+11B7 .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+11B7 .|    <= ''
+11B7 .<= ''
+11B7 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+11B7 .<= ''
+11B7 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+11B7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+11B7 .<= ''
+11B7 .=> phpCAS::forceAuthentication() [login.php:14]
+11B7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+11B7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+11B7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+11B7 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+11B7 .|    |    |    <= true
+11B7 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+11B7 .|    |    <= true
+11B7 .|    |    no need to authenticate [Client.php:1282]
+11B7 .|    <= true
+11B7 .<= ''
+11B7 .=> phpCAS::checkAuthentication() [login.php:16]
+11B7 .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+11B7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+11B7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+11B7 .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+11B7 .|    |    |    <= true
+11B7 .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+11B7 .|    |    <= true
+11B7 .|    |    user is authenticated [Client.php:1332]
+11B7 .|    <= true
+11B7 .<= true
+D511 .START (2018-07-13 13:44:25) phpCAS-1.3.5 ****************** [CAS.php:468]
+D511 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+D511 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+D511 .|    |    Starting a new session ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c [Client.php:932]
+D511 .|    |    Session is not authenticated [Client.php:938]
+D511 .|    <= ''
+D511 .<= ''
+D511 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+D511 .<= ''
+D511 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+D511 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+D511 .<= ''
+D511 .=> phpCAS::forceAuthentication() [login.php:14]
+D511 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+D511 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+D511 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+D511 .|    |    |    |    no user found [Client.php:1635]
+D511 .|    |    |    <= false
+D511 .|    |    |    no ticket found [Client.php:1494]
+D511 .|    |    <= false
+D511 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+D511 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+D511 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+D511 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+D511 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+D511 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+D511 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+D511 .|    |    |    exit()
+D511 .|    |    |    -
+D511 .|    |    -
+D511 .|    -
+C1A0 .START (2018-07-13 13:44:38) phpCAS-1.3.5 ****************** [CAS.php:468]
+C1A0 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+C1A0 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+C1A0 .|    |    Starting a new session ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c [Client.php:932]
+C1A0 .|    |    Session is not authenticated [Client.php:938]
+C1A0 .|    |    Ticket 'ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c' found [Client.php:1020]
+C1A0 .|    <= ''
+C1A0 .<= ''
+C1A0 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+C1A0 .<= ''
+C1A0 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+C1A0 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+C1A0 .<= ''
+C1A0 .=> phpCAS::forceAuthentication() [login.php:14]
+C1A0 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+C1A0 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+C1A0 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+C1A0 .|    |    |    |    no user found [Client.php:1635]
+C1A0 .|    |    |    <= false
+C1A0 .|    |    |    CAS 2.0 ticket `ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c' is present [Client.php:1446]
+C1A0 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+C1A0 .|    |    |    |     [Client.php:3169]
+C1A0 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+C1A0 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+C1A0 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+C1A0 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+C1A0 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+C1A0 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c', NULL, NULL, NULL) [Client.php:3191]
+C1A0 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+C1A0 .|    |    |    |    |    |    Response Body: 
+C1A0 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+C1A0 .|    |    |    |    |    |        <cas:authenticationSuccess>
+C1A0 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+C1A0 .|    |    |    |    |    |            </cas:authenticationSuccess>
+C1A0 .|    |    |    |    |    |    </cas:serviceResponse>
+C1A0 .|    |    |    |    |    |    
+C1A0 .|    |    |    |    |    |     [CurlRequest.php:84]
+C1A0 .|    |    |    |    |    <= true
+C1A0 .|    |    |    |    <= true
+C1A0 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+C1A0 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+C1A0 .|    |    |    |    <= ''
+C1A0 .|    |    |    |    Storing Proxy List [Client.php:3270]
+C1A0 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+C1A0 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+C1A0 .|    |    |    |    <= true
+C1A0 .|    |    |    |    => CAS_Client::_renameSession('ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c') [Client.php:3293]
+C1A0 .|    |    |    |    |    Killing session: ST-3768-jQdhGEMO9ojbaILvoBlo-cas01c [Client.php:3682]
+C1A0 .|    |    |    |    |    Starting session: ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c [Client.php:3686]
+C1A0 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+C1A0 .|    |    |    |    <= ''
+C1A0 .|    |    |    <= true
+C1A0 .|    |    |    CAS 2.0 ticket `ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c' was validated [Client.php:1452]
+C1A0 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+C1A0 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+C1A0 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+C1A0 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+C1A0 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+C1A0 .|    |    |    exit()
+C1A0 .|    |    |    -
+C1A0 .|    |    -
+C1A0 .|    -
+404B .START (2018-07-13 13:44:38) phpCAS-1.3.5 ****************** [CAS.php:468]
+404B .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+404B .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+404B .|    |    Starting a new session ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c [Client.php:932]
+404B .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+404B .|    <= ''
+404B .<= ''
+404B .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+404B .<= ''
+404B .=> phpCAS::setNoCasServerValidation() [login.php:12]
+404B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+404B .<= ''
+404B .=> phpCAS::forceAuthentication() [login.php:14]
+404B .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+404B .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+404B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+404B .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+404B .|    |    |    <= true
+404B .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+404B .|    |    <= true
+404B .|    |    no need to authenticate [Client.php:1282]
+404B .|    <= true
+404B .<= ''
+404B .=> phpCAS::checkAuthentication() [login.php:16]
+404B .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+404B .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+404B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+404B .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+404B .|    |    |    <= true
+404B .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+404B .|    |    <= true
+404B .|    |    user is authenticated [Client.php:1332]
+404B .|    <= true
+404B .<= true
+8995 .START (2018-07-15 12:23:23) phpCAS-1.3.5 ****************** [CAS.php:468]
+8995 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+8995 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+8995 .|    |    Starting a new session ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c [Client.php:932]
+8995 .|    |    Session is not authenticated [Client.php:938]
+8995 .|    <= ''
+8995 .<= ''
+8995 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+8995 .<= ''
+8995 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+8995 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+8995 .<= ''
+8995 .=> phpCAS::forceAuthentication() [login.php:14]
+8995 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+8995 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+8995 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+8995 .|    |    |    |    no user found [Client.php:1635]
+8995 .|    |    |    <= false
+8995 .|    |    |    no ticket found [Client.php:1494]
+8995 .|    |    <= false
+8995 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1289]
+8995 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1656]
+8995 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+8995 .|    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+8995 .|    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+8995 .|    |    |    <= 'https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+8995 .|    |    |    Redirect to : https://cas.univ-avignon.fr/cas/login?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php [Client.php:1663]
+8995 .|    |    |    exit()
+8995 .|    |    |    -
+8995 .|    |    -
+8995 .|    -
+05A7 .START (2018-07-15 12:23:27) phpCAS-1.3.5 ****************** [CAS.php:468]
+05A7 .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+05A7 .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+05A7 .|    |    Starting a new session ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c [Client.php:932]
+05A7 .|    |    Session is not authenticated [Client.php:938]
+05A7 .|    |    Ticket 'ST-8654-BffXiedHSFM3CRyJd7Cv-cas02c' found [Client.php:1020]
+05A7 .|    <= ''
+05A7 .<= ''
+05A7 .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+05A7 .<= ''
+05A7 .=> phpCAS::setNoCasServerValidation() [login.php:12]
+05A7 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+05A7 .<= ''
+05A7 .=> phpCAS::forceAuthentication() [login.php:14]
+05A7 .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+05A7 .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+05A7 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+05A7 .|    |    |    |    no user found [Client.php:1635]
+05A7 .|    |    |    <= false
+05A7 .|    |    |    CAS 2.0 ticket `ST-8654-BffXiedHSFM3CRyJd7Cv-cas02c' is present [Client.php:1446]
+05A7 .|    |    |    => CAS_Client::validateCAS20('', NULL, NULL, false) [Client.php:1449]
+05A7 .|    |    |    |     [Client.php:3169]
+05A7 .|    |    |    |    => CAS_Client::getServerServiceValidateURL() [Client.php:3176]
+05A7 .|    |    |    |    |    => CAS_Client::getURL() [Client.php:453]
+05A7 .|    |    |    |    |    |    Final URI: http://209.97.134.204/rpg/login.php [Client.php:3548]
+05A7 .|    |    |    |    |    <= 'http://209.97.134.204/rpg/login.php'
+05A7 .|    |    |    |    <= 'https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php'
+05A7 .|    |    |    |    => CAS_Client::_readURL('https://cas.univ-avignon.fr/cas/serviceValidate?service=http%3A%2F%2F209.97.134.204%2Frpg%2Flogin.php&ticket=ST-8654-BffXiedHSFM3CRyJd7Cv-cas02c', NULL, NULL, NULL) [Client.php:3191]
+05A7 .|    |    |    |    |    => CAS_Request_CurlRequest::sendRequest() [AbstractRequest.php:242]
+05A7 .|    |    |    |    |    |    Response Body: 
+05A7 .|    |    |    |    |    |    <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+05A7 .|    |    |    |    |    |        <cas:authenticationSuccess>
+05A7 .|    |    |    |    |    |            <cas:user>uapv1602171</cas:user>
+05A7 .|    |    |    |    |    |            </cas:authenticationSuccess>
+05A7 .|    |    |    |    |    |    </cas:serviceResponse>
+05A7 .|    |    |    |    |    |    
+05A7 .|    |    |    |    |    |     [CurlRequest.php:84]
+05A7 .|    |    |    |    |    <= true
+05A7 .|    |    |    |    <= true
+05A7 .|    |    |    |    => CAS_Client::_readExtraAttributesCas20(DOMNodeList) [Client.php:3261]
+05A7 .|    |    |    |    |    Testing for rubycas style attributes [Client.php:3376]
+05A7 .|    |    |    |    <= ''
+05A7 .|    |    |    |    Storing Proxy List [Client.php:3270]
+05A7 .|    |    |    |    => CAS_ProxyChain_AllowedList::isProxyListAllowed(array ()) [Client.php:3273]
+05A7 .|    |    |    |    |    No proxies were found in the response [AllowedList.php:81]
+05A7 .|    |    |    |    <= true
+05A7 .|    |    |    |    => CAS_Client::_renameSession('ST-8654-BffXiedHSFM3CRyJd7Cv-cas02c') [Client.php:3293]
+05A7 .|    |    |    |    |    Killing session: ST-5444-H1cewN7XqjdYY1VfkJKQ-cas02c [Client.php:3682]
+05A7 .|    |    |    |    |    Starting session: ST-8654-BffXiedHSFM3CRyJd7Cv-cas02c [Client.php:3686]
+05A7 .|    |    |    |    |    Restoring old session vars [Client.php:3689]
+05A7 .|    |    |    |    <= ''
+05A7 .|    |    |    <= true
+05A7 .|    |    |    CAS 2.0 ticket `ST-8654-BffXiedHSFM3CRyJd7Cv-cas02c' was validated [Client.php:1452]
+05A7 .|    |    |    => CAS_Client::getURL() [Client.php:1518]
+05A7 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+05A7 .|    |    |    Prepare redirect to : http://209.97.134.204/rpg/login.php [Client.php:1518]
+05A7 .|    |    |    => CAS_Client::getURL() [Client.php:1520]
+05A7 .|    |    |    <= 'http://209.97.134.204/rpg/login.php'
+05A7 .|    |    |    exit()
+05A7 .|    |    |    -
+05A7 .|    |    -
+05A7 .|    -
+0AAC .START (2018-07-15 12:23:28) phpCAS-1.3.5 ****************** [CAS.php:468]
+0AAC .=> phpCAS::client('2.0', 'cas.univ-avignon.fr', 443, '/cas') [login.php:8]
+0AAC .|    => CAS_Client::__construct('2.0', false, 'cas.univ-avignon.fr', 443, '/cas', true) [CAS.php:359]
+0AAC .|    |    Starting a new session ST-8654-BffXiedHSFM3CRyJd7Cv-cas02c [Client.php:932]
+0AAC .|    |    Session is authenticated as: uapv1602171 [Client.php:936]
+0AAC .|    <= ''
+0AAC .<= ''
+0AAC .=> CAS_Client::setLang('CAS_Languages_French') [CAS.php:694]
+0AAC .<= ''
+0AAC .=> phpCAS::setNoCasServerValidation() [login.php:12]
+0AAC .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1644]
+0AAC .<= ''
+0AAC .=> phpCAS::forceAuthentication() [login.php:14]
+0AAC .|    => CAS_Client::forceAuthentication() [CAS.php:1098]
+0AAC .|    |    => CAS_Client::isAuthenticated() [Client.php:1280]
+0AAC .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0AAC .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+0AAC .|    |    |    <= true
+0AAC .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+0AAC .|    |    <= true
+0AAC .|    |    no need to authenticate [Client.php:1282]
+0AAC .|    <= true
+0AAC .<= ''
+0AAC .=> phpCAS::checkAuthentication() [login.php:16]
+0AAC .|    => CAS_Client::checkAuthentication() [CAS.php:1078]
+0AAC .|    |    => CAS_Client::isAuthenticated() [Client.php:1331]
+0AAC .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1393]
+0AAC .|    |    |    |    user = `uapv1602171' [Client.php:1622]
+0AAC .|    |    |    <= true
+0AAC .|    |    |    user was already authenticated, no need to look for tickets [Client.php:1416]
+0AAC .|    |    <= true
+0AAC .|    |    user is authenticated [Client.php:1332]
+0AAC .|    <= true
+0AAC .<= true
